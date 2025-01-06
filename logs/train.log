@@ -1,0 +1,187 @@
+2025-01-05 20:38:57,191 [INFO] Загрузка данных из ST14000NM001G.csv
+2025-01-05 20:39:02,483 [INFO] Загружено 7320142 строк
+2025-01-05 20:39:02,483 [INFO] Начало подготовки признаков...
+2025-01-05 20:39:02,706 [INFO] DEBUG режим: используется подвыборка данных размером 366007
+2025-01-05 20:39:02,836 [INFO] Доступные SMART-параметры: ['smart_5_raw', 'smart_9_raw', 'smart_187_raw', 'smart_188_raw', 'smart_192_raw', 'smart_197_raw', 'smart_198_raw', 'smart_199_raw', 'smart_240_raw', 'smart_241_raw', 'smart_242_raw']
+2025-01-05 20:39:02,860 [INFO] Создание признаков для окна 7 дней...
+2025-01-05 20:39:41,701 [INFO] Подготовка признаков завершена. Итоговое количество признаков: 77
+2025-01-05 20:39:41,757 [INFO] Обработка пропущенных значений...
+2025-01-05 20:39:42,268 [INFO] Размер обучающей выборки: (292805, 73)
+2025-01-05 20:39:42,268 [INFO] Размер тестовой выборки: (73202, 73)
+2025-01-05 20:39:42,269 [INFO] Распределение классов в обучающей выборке:
+failure_future
+0    292803
+1         2
+Name: count, dtype: int64
+2025-01-05 20:39:42,270 [INFO] Распределение классов в тестовой выборке:
+failure_future
+0    73201
+1        1
+Name: count, dtype: int64
+2025-01-05 20:39:42,271 [INFO] Начало обучения ансамбля моделей...
+2025-01-05 20:39:42,272 [WARNING] Мало примеров в минорном классе (2). SMOTE будет пропущен.
+2025-01-05 20:39:42,272 [INFO] Обучение модели CatBoostClassifier
+2025-01-05 20:39:42,292 [INFO] Fold 1/2
+2025-01-05 20:39:42,359 [ERROR] Произошла ошибка: Bad value for num_feature[non_default_doc_idx=0,feature_idx=0]="ST14000NM001G": Cannot convert 'b'ST14000NM001G'' to float
+Traceback (most recent call last):
+  File "_catboost.pyx", line 2547, in _catboost.get_float_feature
+  File "_catboost.pyx", line 1226, in _catboost._FloatOrNan
+  File "_catboost.pyx", line 1021, in _catboost._FloatOrNanFromString
+TypeError: Cannot convert 'b'ST14000NM001G'' to float
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/train.py", line 51, in main
+    model.fit(X_train, y_train)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 44, in fit
+    self._train_model(catboost_model, X_train_res, y_train_res, skf)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 66, in _train_model
+    model.fit(X_fold_train, y_fold_train)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/catboost/core.py", line 5245, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, graph, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/catboost/core.py", line 2395, in _fit
+    train_params = self._prepare_train_params(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/catboost/core.py", line 2275, in _prepare_train_params
+    train_pool = _build_train_pool(X, y, cat_features, text_features, embedding_features, pairs, graph,
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/catboost/core.py", line 1513, in _build_train_pool
+    train_pool = Pool(X, y, cat_features=cat_features, text_features=text_features, embedding_features=embedding_features, pairs=pairs, graph=graph, weight=sample_weight, group_id=group_id,
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/catboost/core.py", line 855, in __init__
+    self._init(data, label, cat_features, text_features, embedding_features, embedding_features_data, pairs, graph, weight,
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/catboost/core.py", line 1491, in _init
+    self._init_pool(data, label, cat_features, text_features, embedding_features, embedding_features_data, pairs, graph, weight,
+  File "_catboost.pyx", line 4339, in _catboost._PoolBase._init_pool
+  File "_catboost.pyx", line 4391, in _catboost._PoolBase._init_pool
+  File "_catboost.pyx", line 4200, in _catboost._PoolBase._init_features_order_layout_pool
+  File "_catboost.pyx", line 3127, in _catboost._set_features_order_data_pd_data_frame
+  File "_catboost.pyx", line 2591, in _catboost.create_num_factor_data
+  File "_catboost.pyx", line 2549, in _catboost.get_float_feature
+_catboost.CatBoostError: Bad value for num_feature[non_default_doc_idx=0,feature_idx=0]="ST14000NM001G": Cannot convert 'b'ST14000NM001G'' to float
+2025-01-05 20:41:57,183 [INFO] Загрузка данных из ST14000NM001G.csv
+2025-01-05 20:42:03,116 [INFO] Загружено 7320142 строк
+2025-01-05 20:42:03,117 [INFO] Начало подготовки признаков...
+2025-01-05 20:42:03,438 [INFO] DEBUG режим: используется подвыборка данных размером 366007
+2025-01-05 20:42:03,576 [INFO] Доступные SMART-параметры: ['smart_5_raw', 'smart_9_raw', 'smart_187_raw', 'smart_188_raw', 'smart_192_raw', 'smart_197_raw', 'smart_198_raw', 'smart_199_raw', 'smart_240_raw', 'smart_241_raw', 'smart_242_raw']
+2025-01-05 20:42:03,610 [INFO] Создание признаков для окна 7 дней...
+2025-01-05 20:42:41,060 [INFO] Подготовка признаков завершена. Итоговое количество признаков: 77
+2025-01-05 20:42:41,116 [INFO] Обработка пропущенных значений...
+2025-01-05 20:42:41,488 [INFO] Типы данных признаков:
+2025-01-05 20:42:41,488 [INFO] capacity_bytes: int64
+2025-01-05 20:42:41,488 [INFO] smart_5_raw: float64
+2025-01-05 20:42:41,488 [INFO] smart_9_raw: float64
+2025-01-05 20:42:41,488 [INFO] smart_187_raw: float64
+2025-01-05 20:42:41,488 [INFO] smart_188_raw: float64
+2025-01-05 20:42:41,489 [INFO] smart_192_raw: float64
+2025-01-05 20:42:41,489 [INFO] smart_197_raw: float64
+2025-01-05 20:42:41,489 [INFO] smart_198_raw: float64
+2025-01-05 20:42:41,489 [INFO] smart_199_raw: float64
+2025-01-05 20:42:41,489 [INFO] smart_240_raw: float64
+2025-01-05 20:42:41,489 [INFO] smart_241_raw: float64
+2025-01-05 20:42:41,489 [INFO] smart_242_raw: float64
+2025-01-05 20:42:41,489 [INFO] year: int32
+2025-01-05 20:42:41,489 [INFO] month: int32
+2025-01-05 20:42:41,489 [INFO] day_of_week: int32
+2025-01-05 20:42:41,489 [INFO] day_of_month: int32
+2025-01-05 20:42:41,489 [INFO] smart_5_raw_mean_7d: float64
+2025-01-05 20:42:41,489 [INFO] smart_5_raw_std_7d: float64
+2025-01-05 20:42:41,489 [INFO] smart_5_raw_max_7d: float64
+2025-01-05 20:42:41,489 [INFO] smart_5_raw_min_7d: float64
+2025-01-05 20:42:41,489 [INFO] smart_5_raw_delta_7d: float64
+2025-01-05 20:42:41,489 [INFO] smart_9_raw_mean_7d: float64
+2025-01-05 20:42:41,489 [INFO] smart_9_raw_std_7d: float64
+2025-01-05 20:42:41,489 [INFO] smart_9_raw_max_7d: float64
+2025-01-05 20:42:41,489 [INFO] smart_9_raw_min_7d: float64
+2025-01-05 20:42:41,489 [INFO] smart_9_raw_delta_7d: float64
+2025-01-05 20:42:41,489 [INFO] smart_187_raw_mean_7d: float64
+2025-01-05 20:42:41,490 [INFO] smart_187_raw_std_7d: float64
+2025-01-05 20:42:41,490 [INFO] smart_187_raw_max_7d: float64
+2025-01-05 20:42:41,490 [INFO] smart_187_raw_min_7d: float64
+2025-01-05 20:42:41,490 [INFO] smart_187_raw_delta_7d: float64
+2025-01-05 20:42:41,490 [INFO] smart_188_raw_mean_7d: float64
+2025-01-05 20:42:41,490 [INFO] smart_188_raw_std_7d: float64
+2025-01-05 20:42:41,490 [INFO] smart_188_raw_max_7d: float64
+2025-01-05 20:42:41,490 [INFO] smart_188_raw_min_7d: float64
+2025-01-05 20:42:41,490 [INFO] smart_188_raw_delta_7d: float64
+2025-01-05 20:42:41,490 [INFO] smart_192_raw_mean_7d: float64
+2025-01-05 20:42:41,490 [INFO] smart_192_raw_std_7d: float64
+2025-01-05 20:42:41,490 [INFO] smart_192_raw_max_7d: float64
+2025-01-05 20:42:41,490 [INFO] smart_192_raw_min_7d: float64
+2025-01-05 20:42:41,490 [INFO] smart_192_raw_delta_7d: float64
+2025-01-05 20:42:41,490 [INFO] smart_197_raw_mean_7d: float64
+2025-01-05 20:42:41,490 [INFO] smart_197_raw_std_7d: float64
+2025-01-05 20:42:41,490 [INFO] smart_197_raw_max_7d: float64
+2025-01-05 20:42:41,490 [INFO] smart_197_raw_min_7d: float64
+2025-01-05 20:42:41,490 [INFO] smart_197_raw_delta_7d: float64
+2025-01-05 20:42:41,490 [INFO] smart_198_raw_mean_7d: float64
+2025-01-05 20:42:41,490 [INFO] smart_198_raw_std_7d: float64
+2025-01-05 20:42:41,491 [INFO] smart_198_raw_max_7d: float64
+2025-01-05 20:42:41,491 [INFO] smart_198_raw_min_7d: float64
+2025-01-05 20:42:41,491 [INFO] smart_198_raw_delta_7d: float64
+2025-01-05 20:42:41,491 [INFO] smart_199_raw_mean_7d: float64
+2025-01-05 20:42:41,491 [INFO] smart_199_raw_std_7d: float64
+2025-01-05 20:42:41,491 [INFO] smart_199_raw_max_7d: float64
+2025-01-05 20:42:41,491 [INFO] smart_199_raw_min_7d: float64
+2025-01-05 20:42:41,491 [INFO] smart_199_raw_delta_7d: float64
+2025-01-05 20:42:41,491 [INFO] smart_240_raw_mean_7d: float64
+2025-01-05 20:42:41,491 [INFO] smart_240_raw_std_7d: float64
+2025-01-05 20:42:41,491 [INFO] smart_240_raw_max_7d: float64
+2025-01-05 20:42:41,491 [INFO] smart_240_raw_min_7d: float64
+2025-01-05 20:42:41,491 [INFO] smart_240_raw_delta_7d: float64
+2025-01-05 20:42:41,491 [INFO] smart_241_raw_mean_7d: float64
+2025-01-05 20:42:41,491 [INFO] smart_241_raw_std_7d: float64
+2025-01-05 20:42:41,491 [INFO] smart_241_raw_max_7d: float64
+2025-01-05 20:42:41,491 [INFO] smart_241_raw_min_7d: float64
+2025-01-05 20:42:41,491 [INFO] smart_241_raw_delta_7d: float64
+2025-01-05 20:42:41,491 [INFO] smart_242_raw_mean_7d: float64
+2025-01-05 20:42:41,491 [INFO] smart_242_raw_std_7d: float64
+2025-01-05 20:42:41,491 [INFO] smart_242_raw_max_7d: float64
+2025-01-05 20:42:41,492 [INFO] smart_242_raw_min_7d: float64
+2025-01-05 20:42:41,492 [INFO] smart_242_raw_delta_7d: float64
+2025-01-05 20:42:41,492 [INFO] model_encoded: int64
+2025-01-05 20:42:41,670 [INFO] Размер обучающей выборки: (292805, 72)
+2025-01-05 20:42:41,670 [INFO] Размер тестовой выборки: (73202, 72)
+2025-01-05 20:42:41,671 [INFO] Распределение классов в обучающей выборке:
+failure_future
+0    292803
+1         2
+Name: count, dtype: int64
+2025-01-05 20:42:41,671 [INFO] Распределение классов в тестовой выборке:
+failure_future
+0    73201
+1        1
+Name: count, dtype: int64
+2025-01-05 20:42:41,671 [INFO] Начало обучения ансамбля моделей...
+2025-01-05 20:42:41,672 [WARNING] Мало примеров в минорном классе (2). SMOTE будет пропущен.
+2025-01-05 20:42:41,672 [INFO] Обучение модели CatBoostClassifier
+2025-01-05 20:42:41,693 [INFO] Fold 1/2
+2025-01-05 20:42:43,489 [INFO] Fold 2/2
+2025-01-05 20:42:45,171 [INFO] Обучение модели LightGBM
+2025-01-05 20:42:45,193 [INFO] Fold 1/2
+2025-01-05 20:42:45,806 [INFO] Fold 2/2
+2025-01-05 20:42:46,655 [INFO] Веса моделей: [0.5, 0.5]
+2025-01-05 20:42:46,776 [INFO] 
+Результаты тестирования:
+2025-01-05 20:42:46,776 [INFO] --------------------------------------------------
+2025-01-05 20:42:46,781 [INFO] 
+Матрица ошибок:
+2025-01-05 20:42:46,781 [INFO] TN: 73199, FP: 2
+2025-01-05 20:42:46,781 [INFO] FN: 1, TP: 0
+2025-01-05 20:42:46,829 [INFO] 
+Подробный отчет:
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     73201
+           1       0.00      0.00      0.00         1
+
+    accuracy                           1.00     73202
+   macro avg       0.50      0.50      0.50     73202
+weighted avg       1.00      1.00      1.00     73202
+
+2025-01-05 20:42:46,844 [INFO] 
+ROC AUC: 0.7367
+2025-01-05 20:42:46,856 [INFO] Average Precision Score: 0.0001
+2025-01-05 20:42:46,856 [INFO] --------------------------------------------------
+2025-01-05 20:42:47,364 [INFO] Обучение завершено успешно

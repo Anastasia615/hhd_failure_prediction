@@ -1,0 +1,1899 @@
+2025-01-05 19:50:49,164 [INFO] Загрузка данных...
+2025-01-05 19:50:54,452 [INFO] Данные загружены. Размер: (7320142, 16)
+2025-01-05 19:50:54,452 [INFO] Обработка пропущенных значений...
+2025-01-05 19:50:56,185 [INFO] Начало подготовки признаков...
+2025-01-05 19:50:57,545 [ERROR] Ошибка при обучении модели: 'Column not found: smart_1_raw'
+Traceback (most recent call last):
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/train.py", line 24, in main
+    data = prepare_features(data)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/feature_engineering.py", line 52, in prepare_features
+    df = create_rolling_features(df, feature, window)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/feature_engineering.py", line 20, in create_rolling_features
+    group = df.groupby('serial_number')[feature]
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/pandas/core/groupby/generic.py", line 1964, in __getitem__
+    return super().__getitem__(key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/pandas/core/base.py", line 244, in __getitem__
+    raise KeyError(f"Column not found: {key}")
+KeyError: 'Column not found: smart_1_raw'
+2025-01-05 19:53:47,459 [INFO] Загрузка данных...
+2025-01-05 19:53:52,665 [INFO] Данные загружены. Размер: (7320142, 16)
+2025-01-05 19:53:52,665 [INFO] Обработка пропущенных значений...
+2025-01-05 19:53:54,398 [INFO] Начало подготовки признаков...
+2025-01-05 19:53:54,399 [INFO] Доступные столбцы в датасете: ['date', 'serial_number', 'model', 'capacity_bytes', 'failure', 'smart_5_raw', 'smart_9_raw', 'smart_187_raw', 'smart_188_raw', 'smart_192_raw', 'smart_197_raw', 'smart_198_raw', 'smart_199_raw', 'smart_240_raw', 'smart_241_raw', 'smart_242_raw']
+2025-01-05 19:53:55,734 [INFO] Доступные SMART-параметры: ['smart_5_raw', 'smart_9_raw', 'smart_187_raw', 'smart_188_raw', 'smart_192_raw', 'smart_197_raw', 'smart_198_raw', 'smart_199_raw', 'smart_240_raw', 'smart_241_raw', 'smart_242_raw']
+2025-01-05 19:55:50,863 [INFO] Загрузка данных...
+2025-01-05 19:55:56,141 [INFO] Данные загружены. Размер: (7320142, 16)
+2025-01-05 19:55:56,141 [INFO] Обработка пропущенных значений...
+2025-01-05 19:55:57,921 [INFO] Начало подготовки признаков...
+2025-01-05 19:55:57,921 [INFO] Доступные столбцы в датасете: ['date', 'serial_number', 'model', 'capacity_bytes', 'failure', 'smart_5_raw', 'smart_9_raw', 'smart_187_raw', 'smart_188_raw', 'smart_192_raw', 'smart_197_raw', 'smart_198_raw', 'smart_199_raw', 'smart_240_raw', 'smart_241_raw', 'smart_242_raw']
+2025-01-05 19:55:59,278 [INFO] Доступные SMART-параметры: ['smart_5_raw', 'smart_9_raw', 'smart_187_raw', 'smart_188_raw', 'smart_192_raw', 'smart_197_raw', 'smart_198_raw', 'smart_199_raw', 'smart_240_raw', 'smart_241_raw', 'smart_242_raw']
+2025-01-05 19:55:59,303 [ERROR] Ошибка при обучении модели: nested renamer is not supported
+Traceback (most recent call last):
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/train.py", line 24, in main
+    data = prepare_features(data)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/feature_engineering.py", line 80, in prepare_features
+    df = create_rolling_features(df, feature, window)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/feature_engineering.py", line 33, in create_rolling_features
+    rolling_features = grouped.agg(aggs)
+                       ^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/pandas/core/groupby/generic.py", line 255, in aggregate
+    ret = self._aggregate_multiple_funcs(func, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/pandas/core/groupby/generic.py", line 333, in _aggregate_multiple_funcs
+    raise SpecificationError("nested renamer is not supported")
+pandas.errors.SpecificationError: nested renamer is not supported
+2025-01-05 19:58:48,865 [INFO] Загрузка данных...
+2025-01-05 19:58:54,412 [INFO] Данные загружены. Размер: (7320142, 16)
+2025-01-05 19:58:54,413 [INFO] Обработка пропущенных значений...
+2025-01-05 19:58:56,245 [INFO] Начало подготовки признаков...
+2025-01-05 19:58:56,245 [INFO] Доступные столбцы в датасете: ['date', 'serial_number', 'model', 'capacity_bytes', 'failure', 'smart_5_raw', 'smart_9_raw', 'smart_187_raw', 'smart_188_raw', 'smart_192_raw', 'smart_197_raw', 'smart_198_raw', 'smart_199_raw', 'smart_240_raw', 'smart_241_raw', 'smart_242_raw']
+2025-01-05 19:58:57,638 [INFO] Доступные SMART-параметры: ['smart_5_raw', 'smart_9_raw', 'smart_187_raw', 'smart_188_raw', 'smart_192_raw', 'smart_197_raw', 'smart_198_raw', 'smart_199_raw', 'smart_240_raw', 'smart_241_raw', 'smart_242_raw']
+2025-01-05 20:29:38,541 [INFO] Загрузка данных...
+2025-01-05 20:29:43,897 [INFO] Данные загружены. Размер: (7320142, 16)
+2025-01-05 20:29:43,897 [INFO] Обработка пропущенных значений...
+2025-01-05 20:29:45,972 [INFO] Начало подготовки признаков...
+2025-01-05 20:29:46,189 [INFO] DEBUG режим: используется подвыборка данных размером 366007
+2025-01-05 20:29:46,321 [INFO] Доступные SMART-параметры: ['smart_5_raw', 'smart_9_raw', 'smart_187_raw', 'smart_188_raw', 'smart_192_raw', 'smart_197_raw', 'smart_198_raw', 'smart_199_raw', 'smart_240_raw', 'smart_241_raw', 'smart_242_raw']
+2025-01-05 20:29:46,348 [INFO] Создание признаков для окна 7 дней...
+2025-01-05 20:29:46,350 [ERROR] Ошибка при обучении модели: "Column(s) ['smart_187_raw_mean_7d', 'smart_188_raw_mean_7d', 'smart_192_raw_mean_7d', 'smart_197_raw_mean_7d', 'smart_198_raw_mean_7d', 'smart_199_raw_mean_7d', 'smart_240_raw_mean_7d', 'smart_241_raw_mean_7d', 'smart_242_raw_mean_7d', 'smart_5_raw_mean_7d', 'smart_9_raw_mean_7d'] do not exist"
+Traceback (most recent call last):
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/train.py", line 24, in main
+    data = prepare_features(data)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/feature_engineering.py", line 68, in prepare_features
+    df = create_rolling_features(df, available_smart_features, window)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/feature_engineering.py", line 31, in create_rolling_features
+    result = df.groupby('serial_number')[features].agg(new_features)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/pandas/core/groupby/generic.py", line 1445, in aggregate
+    result = op.agg()
+             ^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/pandas/core/apply.py", line 175, in agg
+    return self.agg_dict_like()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/pandas/core/apply.py", line 406, in agg_dict_like
+    return self.agg_or_apply_dict_like(op_name="agg")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/pandas/core/apply.py", line 1390, in agg_or_apply_dict_like
+    result_index, result_data = self.compute_dict_like(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/pandas/core/apply.py", line 445, in compute_dict_like
+    func = self.normalize_dictlike_arg(op_name, selected_obj, func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/pandas/core/apply.py", line 639, in normalize_dictlike_arg
+    raise KeyError(f"Column(s) {list(cols)} do not exist")
+KeyError: "Column(s) ['smart_187_raw_mean_7d', 'smart_188_raw_mean_7d', 'smart_192_raw_mean_7d', 'smart_197_raw_mean_7d', 'smart_198_raw_mean_7d', 'smart_199_raw_mean_7d', 'smart_240_raw_mean_7d', 'smart_241_raw_mean_7d', 'smart_242_raw_mean_7d', 'smart_5_raw_mean_7d', 'smart_9_raw_mean_7d'] do not exist"
+2025-01-05 20:31:20,044 [INFO] Загрузка данных...
+2025-01-05 20:31:25,244 [INFO] Данные загружены. Размер: (7320142, 16)
+2025-01-05 20:31:25,244 [INFO] Обработка пропущенных значений...
+2025-01-05 20:31:27,146 [INFO] Начало подготовки признаков...
+2025-01-05 20:31:27,359 [INFO] DEBUG режим: используется подвыборка данных размером 366007
+2025-01-05 20:31:27,489 [INFO] Доступные SMART-параметры: ['smart_5_raw', 'smart_9_raw', 'smart_187_raw', 'smart_188_raw', 'smart_192_raw', 'smart_197_raw', 'smart_198_raw', 'smart_199_raw', 'smart_240_raw', 'smart_241_raw', 'smart_242_raw']
+2025-01-05 20:31:27,515 [INFO] Создание признаков для окна 7 дней...
+2025-01-05 20:32:06,503 [INFO] Подготовка признаков завершена. Итоговое количество признаков: 77
+2025-01-05 20:32:06,732 [INFO] Начало обучения ансамбля моделей...
+2025-01-05 20:32:06,733 [INFO] Обучение модели CatBoostClassifier
+2025-01-05 20:32:06,756 [INFO] Fold 1/5
+2025-01-05 20:32:06,862 [ERROR] Ошибка при обучении модели: Expected n_neighbors <= n_samples,  but n_samples = 2, n_neighbors = 6
+Traceback (most recent call last):
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/train.py", line 37, in main
+    model.fit(X_train, y_train)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 45, in fit
+    X_train_res, y_train_res = smote.fit_resample(X_train, y_train)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/imblearn/base.py", line 208, in fit_resample
+    return super().fit_resample(X, y)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/imblearn/base.py", line 112, in fit_resample
+    output = self._fit_resample(X, y)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/imblearn/over_sampling/_smote/base.py", line 389, in _fit_resample
+    nns = self.nn_k_.kneighbors(X_class, return_distance=False)[:, 1:]
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/sklearn/neighbors/_base.py", line 808, in kneighbors
+    raise ValueError(
+ValueError: Expected n_neighbors <= n_samples,  but n_samples = 2, n_neighbors = 6
+2025-01-05 20:33:22,561 [INFO] Загрузка данных...
+2025-01-05 20:33:27,819 [INFO] Данные загружены. Размер: (7320142, 16)
+2025-01-05 20:33:27,819 [INFO] Обработка пропущенных значений...
+2025-01-05 20:33:29,995 [INFO] Начало подготовки признаков...
+2025-01-05 20:33:30,212 [INFO] DEBUG режим: используется подвыборка данных размером 366007
+2025-01-05 20:33:30,352 [INFO] Доступные SMART-параметры: ['smart_5_raw', 'smart_9_raw', 'smart_187_raw', 'smart_188_raw', 'smart_192_raw', 'smart_197_raw', 'smart_198_raw', 'smart_199_raw', 'smart_240_raw', 'smart_241_raw', 'smart_242_raw']
+2025-01-05 20:33:30,376 [INFO] Создание признаков для окна 7 дней...
+2025-01-05 20:34:07,938 [INFO] Подготовка признаков завершена. Итоговое количество признаков: 77
+2025-01-05 20:34:08,168 [INFO] Начало обучения ансамбля моделей...
+2025-01-05 20:34:08,169 [WARNING] Мало примеров в минорном классе (2). SMOTE будет пропущен.
+2025-01-05 20:34:08,169 [INFO] Обучение модели CatBoostClassifier
+2025-01-05 20:34:08,186 [INFO] Fold 1/5
+2025-01-05 20:34:09,757 [ERROR] Ошибка при обучении модели: <catboost.core.CatBoostClassifier object at 0x169335700> is not in list
+Traceback (most recent call last):
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/train.py", line 37, in main
+    model.fit(X_train, y_train)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 45, in fit
+    self._train_model(catboost_model, X_train_res, y_train_res, skf)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 83, in _train_model
+    oof_preds[val_idx, self.models.index(model)] = model.predict_proba(X_val)[:, 1]
+                       ^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: <catboost.core.CatBoostClassifier object at 0x169335700> is not in list
+2025-01-05 20:35:17,740 [INFO] Загрузка данных...
+2025-01-05 20:35:23,033 [INFO] Данные загружены. Размер: (7320142, 16)
+2025-01-05 20:35:23,034 [INFO] Обработка пропущенных значений...
+2025-01-05 20:35:24,981 [INFO] Начало подготовки признаков...
+2025-01-05 20:35:25,212 [INFO] DEBUG режим: используется подвыборка данных размером 366007
+2025-01-05 20:35:25,344 [INFO] Доступные SMART-параметры: ['smart_5_raw', 'smart_9_raw', 'smart_187_raw', 'smart_188_raw', 'smart_192_raw', 'smart_197_raw', 'smart_198_raw', 'smart_199_raw', 'smart_240_raw', 'smart_241_raw', 'smart_242_raw']
+2025-01-05 20:35:25,372 [INFO] Создание признаков для окна 7 дней...
+2025-01-05 20:36:03,423 [INFO] Подготовка признаков завершена. Итоговое количество признаков: 77
+2025-01-05 20:36:03,652 [INFO] Начало обучения ансамбля моделей...
+2025-01-05 20:36:03,653 [WARNING] Мало примеров в минорном классе (2). SMOTE будет пропущен.
+2025-01-05 20:36:03,653 [INFO] Обучение модели CatBoostClassifier
+2025-01-05 20:36:03,673 [INFO] Fold 1/2
+2025-01-05 20:36:05,374 [INFO] Fold 2/2
+2025-01-05 20:36:07,001 [INFO] Обучение модели LightGBM
+2025-01-05 20:36:07,021 [INFO] Fold 1/2
+2025-01-05 20:36:07,560 [INFO] Fold 2/2
+2025-01-05 20:36:08,401 [INFO] Веса моделей: [0.5, 0.5]
+2025-01-05 20:36:08,945 [INFO] Модель успешно обучена и сохранена
+2025-01-05 20:53:23,742 [INFO] Загрузка данных...
+2025-01-05 20:53:29,640 [INFO] Данные загружены. Размер: (7320142, 16)
+2025-01-05 20:53:29,640 [INFO] Обработка пропущенных значений...
+2025-01-05 20:53:31,603 [INFO] Начало подготовки признаков...
+2025-01-05 20:53:31,829 [INFO] DEBUG режим: используется подвыборка данных размером 366007
+2025-01-05 20:53:31,971 [INFO] Доступные SMART-параметры: ['smart_5_raw', 'smart_9_raw', 'smart_187_raw', 'smart_188_raw', 'smart_192_raw', 'smart_197_raw', 'smart_198_raw', 'smart_199_raw', 'smart_240_raw', 'smart_241_raw', 'smart_242_raw']
+2025-01-05 20:53:32,012 [INFO] Создание признаков для окна 7 дней...
+2025-01-05 20:54:09,733 [INFO] Распределение классов после создания целевого признака:
+2025-01-05 20:54:09,735 [INFO] failure_future
+0    366004
+1         3
+Name: count, dtype: int64
+2025-01-05 20:54:09,736 [INFO] Подготовка признаков завершена. Итоговое количество признаков: 77
+2025-01-05 20:54:09,980 [INFO] Начало обучения ансамбля моделей...
+2025-01-05 20:54:09,981 [INFO] Количество примеров в каждом классе: 
+failure_future
+0    292803
+1         2
+Name: count, dtype: int64
+2025-01-05 20:54:09,982 [WARNING] Мало примеров в минорном классе (2). Применяем ADASYN.
+2025-01-05 20:54:10,219 [ERROR] Ошибка при обучении модели: Expected n_neighbors <= n_samples,  but n_samples = 2, n_neighbors = 6
+Traceback (most recent call last):
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/train.py", line 37, in main
+    model.fit(X_train, y_train)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 33, in fit
+    X_train_res, y_train_res = sampler.fit_resample(X_train, y_train)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/imblearn/base.py", line 208, in fit_resample
+    return super().fit_resample(X, y)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/imblearn/base.py", line 112, in fit_resample
+    output = self._fit_resample(X, y)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/imblearn/over_sampling/_adasyn.py", line 202, in _fit_resample
+    nns = self.nn_.kneighbors(X_class, return_distance=False)[:, 1:]
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/sklearn/neighbors/_base.py", line 808, in kneighbors
+    raise ValueError(
+ValueError: Expected n_neighbors <= n_samples,  but n_samples = 2, n_neighbors = 6
+2025-01-05 20:56:27,590 [INFO] Загрузка данных...
+2025-01-05 20:56:33,026 [INFO] Данные загружены. Размер: (7320142, 16)
+2025-01-05 20:56:33,027 [INFO] Обработка пропущенных значений...
+2025-01-05 20:56:35,500 [INFO] Начало подготовки признаков...
+2025-01-05 20:56:35,741 [INFO] DEBUG режим: используется подвыборка данных размером 366007
+2025-01-05 20:56:35,887 [INFO] Доступные SMART-параметры: ['smart_5_raw', 'smart_9_raw', 'smart_187_raw', 'smart_188_raw', 'smart_192_raw', 'smart_197_raw', 'smart_198_raw', 'smart_199_raw', 'smart_240_raw', 'smart_241_raw', 'smart_242_raw']
+2025-01-05 20:56:35,911 [INFO] Создание признаков для окна 7 дней...
+2025-01-05 20:57:16,485 [INFO] Распределение классов после создания целевого признака:
+2025-01-05 20:57:16,486 [INFO] failure_future
+0    366004
+1         3
+Name: count, dtype: int64
+2025-01-05 20:57:16,487 [INFO] Подготовка признаков завершена. Итоговое количество признаков: 77
+2025-01-05 20:57:16,720 [INFO] Начало обучения ансамбля моделей...
+2025-01-05 20:57:16,722 [INFO] Количество примеров в каждом классе: 
+failure_future
+0    292803
+1         2
+Name: count, dtype: int64
+2025-01-05 20:57:16,722 [WARNING] Крайне мало примеров в минорном классе (2). Пропускаем ресемплинг.
+2025-01-05 20:57:16,723 [INFO] После обработки: failure_future
+0    292803
+1         2
+Name: count, dtype: int64
+2025-01-05 20:57:16,723 [INFO] Используем 2 фолдов для кросс-валидации
+2025-01-05 20:57:16,723 [INFO] Обучение модели CatBoostClassifier
+2025-01-05 20:57:16,745 [INFO] Fold 1/2
+2025-01-05 20:57:18,477 [INFO] Fold 2/2
+2025-01-05 20:57:19,677 [INFO] Обучение модели LightGBM
+2025-01-05 20:57:19,695 [INFO] Fold 1/2
+2025-01-05 20:57:19,730 [ERROR] Ошибка при обучении модели: LGBMClassifier.fit() got an unexpected keyword argument 'early_stopping_rounds'
+Traceback (most recent call last):
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/train.py", line 37, in main
+    model.fit(X_train, y_train)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 66, in fit
+    self._train_model(lgb_model, X_train_res, y_train_res, skf)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 83, in _train_model
+    model.fit(X_fold_train, y_fold_train, eval_set=(X_val, y_val), early_stopping_rounds=20, verbose=False)
+TypeError: LGBMClassifier.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2025-01-05 20:59:18,088 [INFO] Загрузка данных...
+2025-01-05 20:59:23,742 [INFO] Данные загружены. Размер: (7320142, 16)
+2025-01-05 20:59:23,744 [INFO] Обработка пропущенных значений...
+2025-01-05 20:59:25,999 [INFO] Начало подготовки признаков...
+2025-01-05 20:59:26,211 [INFO] DEBUG режим: используется подвыборка данных размером 366007
+2025-01-05 20:59:26,349 [INFO] Доступные SMART-параметры: ['smart_5_raw', 'smart_9_raw', 'smart_187_raw', 'smart_188_raw', 'smart_192_raw', 'smart_197_raw', 'smart_198_raw', 'smart_199_raw', 'smart_240_raw', 'smart_241_raw', 'smart_242_raw']
+2025-01-05 20:59:26,382 [INFO] Создание признаков для окна 7 дней...
+2025-01-05 21:00:04,031 [INFO] Распределение классов после создания целевого признака:
+2025-01-05 21:00:04,034 [INFO] failure_future
+0    366004
+1         3
+Name: count, dtype: int64
+2025-01-05 21:00:04,034 [INFO] Подготовка признаков завершена. Итоговое количество признаков: 77
+2025-01-05 21:00:04,258 [INFO] Начало обучения ансамбля моделей...
+2025-01-05 21:00:04,259 [INFO] Количество примеров в каждом классе: 
+failure_future
+0    292803
+1         2
+Name: count, dtype: int64
+2025-01-05 21:00:04,259 [WARNING] Крайне мало примеров в минорном классе (2). Пропускаем ресемплинг.
+2025-01-05 21:00:04,260 [INFO] После обработки: failure_future
+0    292803
+1         2
+Name: count, dtype: int64
+2025-01-05 21:00:04,261 [INFO] Используем 2 фолдов для кросс-валидации
+2025-01-05 21:00:04,261 [INFO] Обучение модели CatBoostClassifier
+2025-01-05 21:00:04,280 [INFO] Fold 1/2
+2025-01-05 21:00:05,121 [INFO] Fold 2/2
+2025-01-05 21:00:06,093 [INFO] Обучение модели LightGBM
+2025-01-05 21:00:06,111 [INFO] Fold 1/2
+2025-01-05 21:00:06,136 [ERROR] Ошибка при обучении модели: LGBMClassifier.fit() got an unexpected keyword argument 'verbose'
+Traceback (most recent call last):
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/train.py", line 37, in main
+    model.fit(X_train, y_train)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 66, in fit
+    self._train_model(lgb_model, X_train_res, y_train_res, skf)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 91, in _train_model
+    model.fit(
+TypeError: LGBMClassifier.fit() got an unexpected keyword argument 'verbose'
+2025-01-05 21:04:27,198 [INFO] Загрузка данных...
+2025-01-05 21:04:33,007 [INFO] Данные загружены. Размер: (7320142, 16)
+2025-01-05 21:04:33,008 [INFO] Обработка пропущенных значений...
+2025-01-05 21:04:35,217 [INFO] Начало подготовки признаков...
+2025-01-05 21:04:35,454 [INFO] DEBUG режим: используется подвыборка данных размером 366007
+2025-01-05 21:04:35,606 [INFO] Доступные SMART-параметры: ['smart_5_raw', 'smart_9_raw', 'smart_187_raw', 'smart_188_raw', 'smart_192_raw', 'smart_197_raw', 'smart_198_raw', 'smart_199_raw', 'smart_240_raw', 'smart_241_raw', 'smart_242_raw']
+2025-01-05 21:04:35,656 [INFO] Создание признаков для окна 7 дней...
+2025-01-05 21:05:13,000 [INFO] Распределение классов после создания целевого признака:
+2025-01-05 21:05:13,002 [INFO] failure_future
+0    366004
+1         3
+Name: count, dtype: int64
+2025-01-05 21:05:13,002 [INFO] Подготовка признаков завершена. Итоговое количество признаков: 77
+2025-01-05 21:05:13,243 [INFO] Начало обучения ансамбля моделей...
+2025-01-05 21:05:13,245 [INFO] Количество примеров в каждом классе: 
+failure_future
+0    292803
+1         2
+Name: count, dtype: int64
+2025-01-05 21:05:13,245 [WARNING] Крайне мало примеров в минорном классе (2). Пропускаем ресемплинг.
+2025-01-05 21:05:13,246 [INFO] После обработки: failure_future
+0    292803
+1         2
+Name: count, dtype: int64
+2025-01-05 21:05:13,246 [INFO] Используем 2 фолдов для кросс-валидации
+2025-01-05 21:05:13,246 [INFO] Обучение модели CatBoostClassifier
+2025-01-05 21:05:13,246 [ERROR] Ошибка при обучении модели: catboost.core.CatBoostClassifier() got multiple values for keyword argument 'verbose'
+Traceback (most recent call last):
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/train.py", line 37, in main
+    model.fit(X_train, y_train)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 54, in fit
+    catboost_model = CatBoostClassifier(**CATBOOST_PARAMS, class_weights='Balanced', verbose=False)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: catboost.core.CatBoostClassifier() got multiple values for keyword argument 'verbose'
+2025-01-05 21:07:09,128 [INFO] Загрузка данных...
+2025-01-05 21:07:14,788 [INFO] Данные загружены. Размер: (7320142, 16)
+2025-01-05 21:07:14,789 [INFO] Обработка пропущенных значений...
+2025-01-05 21:07:17,192 [INFO] Начало подготовки признаков...
+2025-01-05 21:07:17,412 [INFO] DEBUG режим: используется подвыборка данных размером 366007
+2025-01-05 21:07:17,558 [INFO] Доступные SMART-параметры: ['smart_5_raw', 'smart_9_raw', 'smart_187_raw', 'smart_188_raw', 'smart_192_raw', 'smart_197_raw', 'smart_198_raw', 'smart_199_raw', 'smart_240_raw', 'smart_241_raw', 'smart_242_raw']
+2025-01-05 21:07:17,584 [INFO] Создание признаков для окна 7 дней...
+2025-01-05 21:07:55,424 [INFO] Распределение классов после создания целевого признака:
+2025-01-05 21:07:55,425 [INFO] failure_future
+0    366004
+1         3
+Name: count, dtype: int64
+2025-01-05 21:07:55,426 [INFO] Подготовка признаков завершена. Итоговое количество признаков: 77
+2025-01-05 21:07:55,657 [INFO] Начало обучения ансамбля моделей...
+2025-01-05 21:07:55,659 [INFO] Количество примеров в каждом классе: 
+failure_future
+0    292803
+1         2
+Name: count, dtype: int64
+2025-01-05 21:07:55,659 [WARNING] Крайне мало примеров в минорном классе (2). Пропускаем ресемплинг.
+2025-01-05 21:07:55,660 [INFO] После обработки: failure_future
+0    292803
+1         2
+Name: count, dtype: int64
+2025-01-05 21:07:55,661 [INFO] Используем 2 фолдов для кросс-валидации
+2025-01-05 21:07:55,661 [INFO] Обучение модели CatBoostClassifier
+2025-01-05 21:07:55,683 [INFO] Fold 1/2
+2025-01-05 21:07:55,744 [ERROR] Ошибка при обучении модели: catboost/private/libs/options/json_helper.h:41: Can't parse parameter "class_weights" with value: "Balanced"
+Traceback (most recent call last):
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/train.py", line 37, in main
+    model.fit(X_train, y_train)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 55, in fit
+    self._train_model(catboost_model, X_train_res, y_train_res, skf)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 81, in _train_model
+    model.fit(
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/catboost/core.py", line 5245, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, graph, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/catboost/core.py", line 2395, in _fit
+    train_params = self._prepare_train_params(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/catboost/core.py", line 2321, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 6583, in _catboost._check_train_params
+  File "_catboost.pyx", line 6605, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/json_helper.h:41: Can't parse parameter "class_weights" with value: "Balanced"
+2025-01-05 21:09:08,975 [INFO] Загрузка данных...
+2025-01-05 21:09:14,168 [INFO] Данные загружены. Размер: (7320142, 16)
+2025-01-05 21:09:14,168 [INFO] Обработка пропущенных значений...
+2025-01-05 21:09:15,896 [INFO] Начало подготовки признаков...
+2025-01-05 21:09:16,117 [INFO] DEBUG режим: используется подвыборка данных размером 366007
+2025-01-05 21:09:16,247 [INFO] Доступные SMART-параметры: ['smart_5_raw', 'smart_9_raw', 'smart_187_raw', 'smart_188_raw', 'smart_192_raw', 'smart_197_raw', 'smart_198_raw', 'smart_199_raw', 'smart_240_raw', 'smart_241_raw', 'smart_242_raw']
+2025-01-05 21:09:16,273 [INFO] Создание признаков для окна 7 дней...
+2025-01-05 21:09:55,321 [INFO] Распределение классов после создания целевого признака:
+2025-01-05 21:09:55,323 [INFO] failure_future
+0    366004
+1         3
+Name: count, dtype: int64
+2025-01-05 21:09:55,323 [INFO] Подготовка признаков завершена. Итоговое количество признаков: 77
+2025-01-05 21:09:55,545 [INFO] Начало обучения ансамбля моделей...
+2025-01-05 21:09:55,546 [INFO] Количество примеров в каждом классе: 
+failure_future
+0    292803
+1         2
+Name: count, dtype: int64
+2025-01-05 21:09:55,546 [WARNING] Крайне мало примеров в минорном классе (2). Пропускаем ресемплинг.
+2025-01-05 21:09:55,548 [INFO] После обработки: failure_future
+0    292803
+1         2
+Name: count, dtype: int64
+2025-01-05 21:09:55,548 [INFO] Используем 2 фолдов для кросс-валидации
+2025-01-05 21:09:55,548 [INFO] Вычисленные веса классов: [0.5000034152655539, 73201.25]
+2025-01-05 21:09:55,548 [INFO] Обучение модели CatBoostClassifier
+2025-01-05 21:09:55,548 [ERROR] Ошибка при обучении модели: catboost.core.CatBoostClassifier() got multiple values for keyword argument 'verbose'
+Traceback (most recent call last):
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/train.py", line 37, in main
+    model.fit(X_train, y_train)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 62, in fit
+    catboost_model = CatBoostClassifier(**CATBOOST_PARAMS, class_weights=class_weights, verbose=False)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: catboost.core.CatBoostClassifier() got multiple values for keyword argument 'verbose'
+2025-01-05 21:11:00,336 [INFO] Загрузка данных...
+2025-01-05 21:11:06,046 [INFO] Данные загружены. Размер: (7320142, 16)
+2025-01-05 21:11:06,046 [INFO] Обработка пропущенных значений...
+2025-01-05 21:11:08,415 [INFO] Начало подготовки признаков...
+2025-01-05 21:11:08,638 [INFO] DEBUG режим: используется подвыборка данных размером 366007
+2025-01-05 21:11:08,792 [INFO] Доступные SMART-параметры: ['smart_5_raw', 'smart_9_raw', 'smart_187_raw', 'smart_188_raw', 'smart_192_raw', 'smart_197_raw', 'smart_198_raw', 'smart_199_raw', 'smart_240_raw', 'smart_241_raw', 'smart_242_raw']
+2025-01-05 21:11:08,826 [INFO] Создание признаков для окна 7 дней...
+2025-01-05 21:11:48,961 [INFO] Распределение классов после создания целевого признака:
+2025-01-05 21:11:48,963 [INFO] failure_future
+0    366004
+1         3
+Name: count, dtype: int64
+2025-01-05 21:11:48,964 [INFO] Подготовка признаков завершена. Итоговое количество признаков: 77
+2025-01-05 21:11:49,348 [INFO] Начало обучения ансамбля моделей...
+2025-01-05 21:11:49,350 [INFO] Количество примеров в каждом классе: 
+failure_future
+0    292803
+1         2
+Name: count, dtype: int64
+2025-01-05 21:11:49,350 [WARNING] Крайне мало примеров в минорном классе (2). Пропускаем ресемплинг.
+2025-01-05 21:11:49,351 [INFO] После обработки: failure_future
+0    292803
+1         2
+Name: count, dtype: int64
+2025-01-05 21:11:49,352 [INFO] Используем 2 фолдов для кросс-валидации
+2025-01-05 21:11:49,352 [INFO] Вычисленные веса классов: [0.5000034152655539, 73201.25]
+2025-01-05 21:11:49,352 [INFO] Обучение модели CatBoostClassifier
+2025-01-05 21:11:49,375 [INFO] Fold 1/2
+2025-01-05 21:11:50,393 [INFO] Fold 2/2
+2025-01-05 21:11:51,716 [INFO] Обучение модели LightGBM
+2025-01-05 21:11:51,736 [INFO] Fold 1/2
+2025-01-05 21:11:51,762 [ERROR] Ошибка при обучении модели: LGBMClassifier.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2025-01-05 21:11:51,763 [ERROR] Ошибка при обучении модели: LGBMClassifier.fit() got an unexpected keyword argument 'early_stopping_rounds'
+Traceback (most recent call last):
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/train.py", line 37, in main
+    model.fit(X_train, y_train)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 70, in fit
+    self._train_model(lgb_model, X_train_res, y_train_res, skf)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 96, in _train_model
+    model.fit(
+TypeError: LGBMClassifier.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2025-01-05 21:13:51,758 [INFO] Загрузка данных...
+2025-01-05 21:13:59,645 [INFO] Данные загружены. Размер: (7320142, 16)
+2025-01-05 21:13:59,646 [INFO] Обработка пропущенных значений...
+2025-01-05 21:14:02,585 [INFO] Начало подготовки признаков...
+2025-01-05 21:14:02,836 [INFO] DEBUG режим: используется подвыборка данных размером 366007
+2025-01-05 21:14:03,014 [INFO] Доступные SMART-параметры: ['smart_5_raw', 'smart_9_raw', 'smart_187_raw', 'smart_188_raw', 'smart_192_raw', 'smart_197_raw', 'smart_198_raw', 'smart_199_raw', 'smart_240_raw', 'smart_241_raw', 'smart_242_raw']
+2025-01-05 21:14:03,046 [INFO] Создание признаков для окна 7 дней...
+2025-01-05 21:14:57,990 [INFO] Распределение классов после создания целевого признака:
+2025-01-05 21:14:57,993 [INFO] failure_future
+0    366004
+1         3
+Name: count, dtype: int64
+2025-01-05 21:14:57,993 [INFO] Подготовка признаков завершена. Итоговое количество признаков: 77
+2025-01-05 21:14:58,325 [INFO] Начало обучения ансамбля моделей...
+2025-01-05 21:14:58,327 [INFO] Количество примеров в каждом классе: 
+failure_future
+0    292803
+1         2
+Name: count, dtype: int64
+2025-01-05 21:14:58,327 [WARNING] Крайне мало примеров в минорном классе (2). Пропускаем ресемплинг.
+2025-01-05 21:14:58,329 [INFO] После обработки: failure_future
+0    292803
+1         2
+Name: count, dtype: int64
+2025-01-05 21:14:58,330 [INFO] Используем 2 фолдов для кросс-валидации
+2025-01-05 21:14:58,330 [INFO] Вычисленные веса классов: [0.5000034152655539, 73201.25]
+2025-01-05 21:14:58,330 [INFO] Обучение модели CatBoostClassifier
+2025-01-05 21:14:58,358 [INFO] Fold 1/2
+2025-01-05 21:15:00,210 [INFO] Fold 2/2
+2025-01-05 21:15:02,540 [INFO] Обучение модели LightGBM
+2025-01-05 21:15:02,579 [INFO] Fold 1/2
+2025-01-05 21:15:02,627 [ERROR] Ошибка при обучении модели: LGBMClassifier.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2025-01-05 21:15:02,628 [ERROR] Ошибка при обучении модели: LGBMClassifier.fit() got an unexpected keyword argument 'early_stopping_rounds'
+Traceback (most recent call last):
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/train.py", line 37, in main
+    model.fit(X_train, y_train)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 70, in fit
+    self._train_model(lgb_model, X_train_res, y_train_res, skf)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 96, in _train_model
+    model.fit(
+TypeError: LGBMClassifier.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2025-01-05 21:19:31,286 [INFO] Загрузка данных...
+2025-01-05 21:19:40,178 [INFO] Данные загружены. Размер: (7320142, 16)
+2025-01-05 21:19:40,178 [INFO] Обработка пропущенных значений...
+2025-01-05 21:19:43,542 [INFO] Начало подготовки признаков...
+2025-01-05 21:19:43,808 [INFO] DEBUG режим: используется подвыборка данных размером 366007
+2025-01-05 21:19:43,988 [INFO] Доступные SMART-параметры: ['smart_5_raw', 'smart_9_raw', 'smart_187_raw', 'smart_188_raw', 'smart_192_raw', 'smart_197_raw', 'smart_198_raw', 'smart_199_raw', 'smart_240_raw', 'smart_241_raw', 'smart_242_raw']
+2025-01-05 21:19:44,030 [INFO] Создание признаков для окна 7 дней...
+2025-01-05 21:20:48,782 [INFO] Распределение классов после создания целевого признака:
+2025-01-05 21:20:48,784 [INFO] failure_future
+0    366004
+1         3
+Name: count, dtype: int64
+2025-01-05 21:20:48,785 [INFO] Подготовка признаков завершена. Итоговое количество признаков: 77
+2025-01-05 21:20:49,103 [INFO] Начало обучения ансамбля моделей...
+2025-01-05 21:20:49,105 [INFO] Количество примеров в каждом классе: 
+failure_future
+0    292803
+1         2
+Name: count, dtype: int64
+2025-01-05 21:20:49,105 [WARNING] Крайне мало примеров в минорном классе (2). Пропускаем ресемплинг.
+2025-01-05 21:20:49,106 [INFO] После обработки: failure_future
+0    292803
+1         2
+Name: count, dtype: int64
+2025-01-05 21:20:49,107 [INFO] Используем 2 фолдов для кросс-валидации
+2025-01-05 21:20:49,107 [INFO] Обучение модели CatBoostClassifier
+2025-01-05 21:20:49,140 [INFO] Fold 1/2
+2025-01-05 21:20:49,215 [ERROR] Ошибка при обучении модели: catboost/private/libs/options/json_helper.h:41: Can't parse parameter "class_weights" with value: "Balanced"
+Traceback (most recent call last):
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/train.py", line 37, in main
+    model.fit(X_train, y_train)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 55, in fit
+    self._train_model(catboost_model, X_train_res, y_train_res, skf)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 80, in _train_model
+    model.fit(
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/catboost/core.py", line 5245, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, graph, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/catboost/core.py", line 2395, in _fit
+    train_params = self._prepare_train_params(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/catboost/core.py", line 2321, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 6583, in _catboost._check_train_params
+  File "_catboost.pyx", line 6605, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/json_helper.h:41: Can't parse parameter "class_weights" with value: "Balanced"
+2025-01-05 21:23:04,632 [INFO] Загрузка данных...
+2025-01-05 21:23:12,495 [INFO] Данные загружены. Размер: (7320142, 16)
+2025-01-05 21:23:12,495 [INFO] Обработка пропущенных значений...
+2025-01-05 21:23:15,421 [INFO] Начало подготовки признаков...
+2025-01-05 21:23:15,726 [INFO] DEBUG режим: используется подвыборка данных размером 366007
+2025-01-05 21:23:15,917 [INFO] Доступные SMART-параметры: ['smart_5_raw', 'smart_9_raw', 'smart_187_raw', 'smart_188_raw', 'smart_192_raw', 'smart_197_raw', 'smart_198_raw', 'smart_199_raw', 'smart_240_raw', 'smart_241_raw', 'smart_242_raw']
+2025-01-05 21:23:15,958 [INFO] Создание признаков для окна 7 дней...
+2025-01-05 21:24:17,236 [INFO] Распределение классов после создания целевого признака:
+2025-01-05 21:24:17,237 [INFO] failure_future
+0    366004
+1         3
+Name: count, dtype: int64
+2025-01-05 21:24:17,238 [INFO] Подготовка признаков завершена. Итоговое количество признаков: 77
+2025-01-05 21:24:17,513 [INFO] Начало обучения ансамбля моделей...
+2025-01-05 21:24:17,515 [INFO] Количество примеров в каждом классе: 
+failure_future
+0    292803
+1         2
+Name: count, dtype: int64
+2025-01-05 21:24:17,515 [WARNING] Крайне мало примеров в минорном классе (2). Пропускаем ресемплинг.
+2025-01-05 21:24:17,517 [INFO] После обработки: failure_future
+0    292803
+1         2
+Name: count, dtype: int64
+2025-01-05 21:24:17,518 [INFO] Используем 2 фолдов для кросс-валидации
+2025-01-05 21:24:17,518 [INFO] Обучение модели CatBoostClassifier
+2025-01-05 21:24:17,518 [INFO] Вычисленные веса классов: [3.415265553973149e-06, 0.5]
+2025-01-05 21:24:17,545 [INFO] Fold 1/2
+2025-01-05 21:24:19,560 [INFO] Fold 2/2
+2025-01-05 21:24:21,362 [INFO] Обучение модели LightGBM
+2025-01-05 21:24:21,400 [INFO] Fold 1/2
+2025-01-05 21:24:21,445 [ERROR] Ошибка при обучении модели: LGBMClassifier.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2025-01-05 21:24:21,445 [ERROR] Ошибка при обучении модели: LGBMClassifier.fit() got an unexpected keyword argument 'early_stopping_rounds'
+Traceback (most recent call last):
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/train.py", line 37, in main
+    model.fit(X_train, y_train)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 62, in fit
+    self._train_model(lgb_model, X_train_res, y_train_res, skf)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 100, in _train_model
+    model.fit(
+TypeError: LGBMClassifier.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2025-01-05 21:28:02,796 [INFO] Загрузка данных...
+2025-01-05 21:28:08,918 [INFO] Данные загружены. Размер: (7320142, 16)
+2025-01-05 21:28:08,918 [INFO] Обработка пропущенных значений...
+2025-01-05 21:28:11,284 [INFO] Начало подготовки признаков...
+2025-01-05 21:28:11,505 [INFO] DEBUG режим: используется подвыборка данных размером 366007
+2025-01-05 21:28:11,641 [INFO] Доступные SMART-параметры: ['smart_5_raw', 'smart_9_raw', 'smart_187_raw', 'smart_188_raw', 'smart_192_raw', 'smart_197_raw', 'smart_198_raw', 'smart_199_raw', 'smart_240_raw', 'smart_241_raw', 'smart_242_raw']
+2025-01-05 21:28:11,676 [INFO] Создание признаков для окна 7 дней...
+2025-01-05 21:28:49,702 [INFO] Распределение классов после создания целевого признака:
+2025-01-05 21:28:49,703 [INFO] failure_future
+0    366004
+1         3
+Name: count, dtype: int64
+2025-01-05 21:28:49,703 [INFO] Подготовка признаков завершена. Итоговое количество признаков: 77
+2025-01-05 21:28:49,945 [INFO] Начало обучения ансамбля моделей...
+2025-01-05 21:28:49,947 [INFO] Количество примеров в каждом классе: 
+failure_future
+0    292803
+1         2
+Name: count, dtype: int64
+2025-01-05 21:28:49,947 [WARNING] Крайне мало примеров в минорном классе (2). Пропускаем ресемплинг.
+2025-01-05 21:28:49,948 [INFO] После обработки: failure_future
+0    292803
+1         2
+Name: count, dtype: int64
+2025-01-05 21:28:49,948 [INFO] Используем 2 фолдов для кросс-валидации
+2025-01-05 21:28:49,948 [INFO] Обучение модели CatBoostClassifier
+2025-01-05 21:28:49,948 [INFO] Вычисленные веса классов: [0.5000034152655539, 73201.25]
+2025-01-05 21:28:49,971 [INFO] Fold 1/2
+2025-01-05 21:28:51,093 [INFO] Fold 2/2
+2025-01-05 21:28:52,352 [INFO] Обучение модели LightGBM
+2025-01-05 21:28:52,371 [INFO] Fold 1/2
+2025-01-05 21:28:52,397 [ERROR] Ошибка при обучении модели: LGBMClassifier.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2025-01-05 21:28:52,397 [ERROR] Ошибка при обучении модели: LGBMClassifier.fit() got an unexpected keyword argument 'early_stopping_rounds'
+Traceback (most recent call last):
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/train.py", line 37, in main
+    model.fit(X_train, y_train)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 62, in fit
+    self._train_model(lgb_model, X_train_res, y_train_res, skf)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 100, in _train_model
+    model.fit(
+TypeError: LGBMClassifier.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2025-01-05 22:32:43,989 [INFO] Загрузка данных...
+2025-01-05 22:32:52,901 [INFO] Данные загружены. Размер: (7320142, 16)
+2025-01-05 22:32:52,901 [INFO] Обработка пропущенных значений...
+2025-01-05 22:32:56,546 [INFO] Пропущенные значения обработаны.
+2025-01-05 22:32:56,547 [INFO] Начало подготовки признаков...
+2025-01-05 22:32:56,804 [INFO] DEBUG режим: используется подвыборка данных размером 366007
+2025-01-05 22:32:56,954 [INFO] Создание циклических признаков...
+2025-01-05 22:32:56,971 [INFO] Доступные SMART-параметры: ['smart_5_raw', 'smart_9_raw', 'smart_187_raw', 'smart_188_raw', 'smart_192_raw', 'smart_197_raw', 'smart_198_raw', 'smart_199_raw', 'smart_240_raw', 'smart_241_raw', 'smart_242_raw']
+2025-01-05 22:32:57,002 [INFO] Создание признаков для окна 7 дней...
+2025-01-05 22:33:36,433 [INFO] Создание взаимодействующих признаков...
+2025-01-05 22:33:36,486 [INFO] Распределение классов после создания целевого признака:
+2025-01-05 22:33:36,488 [INFO] failure_future
+0    366004
+1         3
+Name: count, dtype: int64
+2025-01-05 22:33:36,488 [INFO] Подготовка признаков завершена. Итоговое количество признаков: 82
+2025-01-05 22:33:36,546 [INFO] Признаки подготовлены.
+2025-01-05 22:33:36,712 [INFO] Данные разделены на обучающую и тестовую выборки. Обучающая: (292805, 77), Тестовая: (73202, 77)
+2025-01-05 22:33:36,712 [INFO] Начало обучения ансамбля моделей...
+2025-01-05 22:33:36,713 [INFO] Количество примеров в каждом классе: 
+failure_future
+0    292803
+1         2
+Name: count, dtype: int64
+2025-01-05 22:33:36,713 [WARNING] Крайне мало примеров в минорном классе (2). Пропускаем ресемплинг.
+2025-01-05 22:33:36,715 [INFO] После обработки: failure_future
+0    292803
+1         2
+Name: count, dtype: int64
+2025-01-05 22:33:36,715 [INFO] Используем TimeSeriesSplit для кросс-валидации
+2025-01-05 22:33:36,715 [INFO] Обучение CatBoostClassifier
+2025-01-05 22:33:36,739 [INFO] Вычисленные веса классов: {0: 0.5000034152655539, 1: 73201.25}
+2025-01-05 22:33:36,741 [INFO] Fold 1/2
+2025-01-05 22:33:37,594 [INFO] Fold 2/2
+2025-01-05 22:33:38,371 [INFO] Обучение LightGBMClassifier
+2025-01-05 22:33:38,372 [INFO] Fold 1/2
+2025-01-05 22:33:38,390 [ERROR] Ошибка при обучении модели: LGBMClassifier.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2025-01-05 22:33:38,390 [ERROR] Ошибка при обучении модели: LGBMClassifier.fit() got an unexpected keyword argument 'early_stopping_rounds'
+Traceback (most recent call last):
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/train.py", line 42, in main
+    model.fit(X_train, y_train)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 101, in fit
+    self._train_model(lgb_model, X_train_res, y_train_res, tscv)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 40, in _train_model
+    model.fit(
+TypeError: LGBMClassifier.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2025-01-05 22:35:10,334 [INFO] Загрузка данных...
+2025-01-05 22:35:16,219 [INFO] Данные загружены. Размер: (7320142, 16)
+2025-01-05 22:35:16,219 [INFO] Обработка пропущенных значений...
+2025-01-05 22:35:19,141 [INFO] Пропущенные значения обработаны.
+2025-01-05 22:35:19,142 [INFO] Начало подготовки признаков...
+2025-01-05 22:35:19,380 [INFO] DEBUG режим: используется подвыборка данных размером 366007
+2025-01-05 22:35:19,510 [INFO] Создание циклических признаков...
+2025-01-05 22:35:19,526 [INFO] Доступные SMART-параметры: ['smart_5_raw', 'smart_9_raw', 'smart_187_raw', 'smart_188_raw', 'smart_192_raw', 'smart_197_raw', 'smart_198_raw', 'smart_199_raw', 'smart_240_raw', 'smart_241_raw', 'smart_242_raw']
+2025-01-05 22:35:19,557 [INFO] Создание признаков для окна 7 дней...
+2025-01-05 22:35:58,308 [INFO] Создание взаимодействующих признаков...
+2025-01-05 22:35:58,361 [INFO] Распределение классов после создания целевого признака:
+2025-01-05 22:35:58,362 [INFO] failure_future
+0    366004
+1         3
+Name: count, dtype: int64
+2025-01-05 22:35:58,362 [INFO] Подготовка признаков завершена. Итоговое количество признаков: 82
+2025-01-05 22:35:58,426 [INFO] Признаки подготовлены.
+2025-01-05 22:35:58,586 [INFO] Данные разделены на обучающую и тестовую выборки. Обучающая: (292805, 77), Тестовая: (73202, 77)
+2025-01-05 22:35:58,586 [INFO] Начало обучения ансамбля моделей...
+2025-01-05 22:35:58,587 [INFO] Количество примеров в каждом классе: 
+failure_future
+0    292803
+1         2
+Name: count, dtype: int64
+2025-01-05 22:35:58,587 [WARNING] Крайне мало примеров в минорном классе (2). Пропускаем ресемплинг.
+2025-01-05 22:35:58,589 [INFO] После обработки: failure_future
+0    292803
+1         2
+Name: count, dtype: int64
+2025-01-05 22:35:58,589 [INFO] Используем TimeSeriesSplit для кросс-валидации
+2025-01-05 22:35:58,589 [INFO] Обучение CatBoostClassifier
+2025-01-05 22:35:58,611 [INFO] Вычисленные веса классов: {0: 0.5000034152655539, 1: 73201.25}
+2025-01-05 22:35:58,612 [INFO] Fold 1/2
+2025-01-05 22:35:59,346 [INFO] Fold 2/2
+2025-01-05 22:36:00,237 [INFO] Обучение LightGBMClassifier
+2025-01-05 22:36:00,238 [INFO] Fold 1/2
+2025-01-05 22:36:00,256 [ERROR] Ошибка при обучении модели: LGBMClassifier.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2025-01-05 22:36:00,256 [ERROR] Ошибка при обучении модели: LGBMClassifier.fit() got an unexpected keyword argument 'early_stopping_rounds'
+Traceback (most recent call last):
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/train.py", line 42, in main
+    model.fit(X_train, y_train)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 109, in fit
+    self._train_model(lgb_model, X_train_res, y_train_res, tscv)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 47, in _train_model
+    model.fit(
+TypeError: LGBMClassifier.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2025-01-05 22:36:52,087 [INFO] Загрузка данных...
+2025-01-05 22:36:57,940 [INFO] Данные загружены. Размер: (7320142, 16)
+2025-01-05 22:36:57,941 [INFO] Обработка пропущенных значений...
+2025-01-05 22:37:00,478 [INFO] Пропущенные значения обработаны.
+2025-01-05 22:37:00,479 [INFO] Начало подготовки признаков...
+2025-01-05 22:37:00,730 [INFO] DEBUG режим: используется подвыборка данных размером 366007
+2025-01-05 22:37:00,865 [INFO] Создание циклических признаков...
+2025-01-05 22:37:00,880 [INFO] Доступные SMART-параметры: ['smart_5_raw', 'smart_9_raw', 'smart_187_raw', 'smart_188_raw', 'smart_192_raw', 'smart_197_raw', 'smart_198_raw', 'smart_199_raw', 'smart_240_raw', 'smart_241_raw', 'smart_242_raw']
+2025-01-05 22:37:00,916 [INFO] Создание признаков для окна 7 дней...
+2025-01-05 22:37:38,827 [INFO] Создание взаимодействующих признаков...
+2025-01-05 22:37:38,874 [INFO] Распределение классов после создания целевого признака:
+2025-01-05 22:37:38,876 [INFO] failure_future
+0    366004
+1         3
+Name: count, dtype: int64
+2025-01-05 22:37:38,876 [INFO] Подготовка признаков завершена. Итоговое количество признаков: 82
+2025-01-05 22:37:38,941 [INFO] Признаки подготовлены.
+2025-01-05 22:37:39,105 [INFO] Данные разделены на обучающую и тестовую выборки. Обучающая: (292805, 77), Тестовая: (73202, 77)
+2025-01-05 22:37:39,105 [INFO] Начало обучения ансамбля моделей...
+2025-01-05 22:37:39,107 [INFO] Количество примеров в каждом классе: 
+failure_future
+0    292803
+1         2
+Name: count, dtype: int64
+2025-01-05 22:37:39,107 [WARNING] Крайне мало примеров в минорном классе (2). Пропускаем ресемплинг.
+2025-01-05 22:37:39,108 [INFO] После обработки: failure_future
+0    292803
+1         2
+Name: count, dtype: int64
+2025-01-05 22:37:39,108 [INFO] Используем TimeSeriesSplit для кросс-валидации
+2025-01-05 22:37:39,108 [INFO] Обучение CatBoostClassifier
+2025-01-05 22:37:39,130 [INFO] Вычисленные веса классов: {0: 0.5000034152655539, 1: 73201.25}
+2025-01-05 22:37:39,131 [INFO] Fold 1/2
+2025-01-05 22:37:39,973 [INFO] Fold 2/2
+2025-01-05 22:37:40,826 [INFO] Обучение LightGBMClassifier
+2025-01-05 22:37:40,827 [INFO] Fold 1/2
+2025-01-05 22:37:40,845 [ERROR] Ошибка при обучении модели: LGBMClassifier.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2025-01-05 22:37:40,845 [ERROR] Ошибка при обучении модели: LGBMClassifier.fit() got an unexpected keyword argument 'early_stopping_rounds'
+Traceback (most recent call last):
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/train.py", line 42, in main
+    model.fit(X_train, y_train)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 109, in fit
+    self._train_model(lgb_model, X_train_res, y_train_res, tscv)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 47, in _train_model
+    model.fit(
+TypeError: LGBMClassifier.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2025-01-05 22:44:20,619 [INFO] Загрузка данных...
+2025-01-05 22:44:26,290 [INFO] Данные загружены. Размер: (7320142, 16)
+2025-01-05 22:44:26,291 [INFO] Обработка пропущенных значений...
+2025-01-05 22:44:28,829 [INFO] Пропущенные значения обработаны.
+2025-01-05 22:44:28,830 [INFO] Начало подготовки признаков...
+2025-01-05 22:44:29,069 [INFO] DEBUG режим: используется подвыборка данных размером 366007
+2025-01-05 22:44:29,198 [INFO] Создание циклических признаков...
+2025-01-05 22:44:29,216 [INFO] Доступные SMART-параметры: ['smart_5_raw', 'smart_9_raw', 'smart_187_raw', 'smart_188_raw', 'smart_192_raw', 'smart_197_raw', 'smart_198_raw', 'smart_199_raw', 'smart_240_raw', 'smart_241_raw', 'smart_242_raw']
+2025-01-05 22:44:29,240 [INFO] Создание признаков для окна 7 дней...
+2025-01-05 22:45:07,327 [INFO] Создание взаимодействующих признаков...
+2025-01-05 22:45:07,378 [INFO] Распределение классов после создания целевого признака:
+2025-01-05 22:45:07,380 [INFO] failure_future
+0    366004
+1         3
+Name: count, dtype: int64
+2025-01-05 22:45:07,380 [INFO] Подготовка признаков завершена. Итоговое количество признаков: 82
+2025-01-05 22:45:07,452 [INFO] Признаки подготовлены.
+2025-01-05 22:45:07,617 [INFO] Данные разделены на обучающую и тестовую выборки. Обучающая: (292805, 77), Тестовая: (73202, 77)
+2025-01-05 22:45:07,617 [INFO] Начало обучения ансамбля моделей...
+2025-01-05 22:45:07,618 [INFO] Количество примеров в каждом классе: 
+failure_future
+0    292803
+1         2
+Name: count, dtype: int64
+2025-01-05 22:45:07,618 [WARNING] Крайне мало примеров в минорном классе (2). Пропускаем ресемплинг.
+2025-01-05 22:45:07,619 [INFO] После обработки: failure_future
+0    292803
+1         2
+Name: count, dtype: int64
+2025-01-05 22:45:07,619 [INFO] Используем StratifiedKFold для кросс-валидации
+2025-01-05 22:45:07,620 [INFO] Обучение CatBoostClassifier
+2025-01-05 22:45:07,642 [INFO] Вычисленные веса классов: {0: 0.5000034152655539, 1: 73201.25}
+2025-01-05 22:45:07,662 [INFO] Fold 1/2
+2025-01-05 22:45:08,554 [INFO] Fold 2/2
+2025-01-05 22:45:09,228 [INFO] Обучение LightGBMClassifier
+2025-01-05 22:45:09,251 [INFO] Fold 1/2
+2025-01-05 22:45:09,278 [ERROR] Ошибка при обучении модели: LGBMClassifier.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2025-01-05 22:45:09,278 [ERROR] Ошибка при обучении модели: LGBMClassifier.fit() got an unexpected keyword argument 'early_stopping_rounds'
+Traceback (most recent call last):
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/train.py", line 42, in main
+    model.fit(X_train, y_train)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 109, in fit
+    self._train_model(lgb_model, X_train_res, y_train_res, skf)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 47, in _train_model
+    model.fit(
+TypeError: LGBMClassifier.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2025-01-05 22:48:02,211 [INFO] Загрузка данных...
+2025-01-05 22:48:08,128 [INFO] Данные загружены. Размер: (7320142, 16)
+2025-01-05 22:48:08,130 [INFO] Обработка пропущенных значений...
+2025-01-05 22:48:10,592 [INFO] Пропущенные значения обработаны.
+2025-01-05 22:48:10,592 [INFO] Начало подготовки признаков...
+2025-01-05 22:48:10,827 [INFO] DEBUG режим: используется подвыборка данных размером 366007
+2025-01-05 22:48:10,961 [INFO] Создание циклических признаков...
+2025-01-05 22:48:10,975 [INFO] Доступные SMART-параметры: ['smart_5_raw', 'smart_9_raw', 'smart_187_raw', 'smart_188_raw', 'smart_192_raw', 'smart_197_raw', 'smart_198_raw', 'smart_199_raw', 'smart_240_raw', 'smart_241_raw', 'smart_242_raw']
+2025-01-05 22:48:11,002 [INFO] Создание признаков для окна 7 дней...
+2025-01-05 22:49:06,683 [INFO] Создание взаимодействующих признаков...
+2025-01-05 22:49:06,733 [INFO] Распределение классов после создания целевого признака:
+2025-01-05 22:49:06,735 [INFO] failure_future
+0    366001
+1         6
+Name: count, dtype: int64
+2025-01-05 22:49:06,735 [INFO] Подготовка признаков завершена. Итоговое количество признаков: 82
+2025-01-05 22:49:06,819 [INFO] Признаки подготовлены.
+2025-01-05 22:49:06,988 [INFO] Данные разделены на обучающую и тестовую выборки. Обучающая: (292805, 77), Тестовая: (73202, 77)
+2025-01-05 22:49:06,988 [INFO] Начало обучения ансамбля моделей...
+2025-01-05 22:49:06,989 [INFO] Количество примеров в каждом классе: 
+failure_future
+0    292800
+1         5
+Name: count, dtype: int64
+2025-01-05 22:49:06,989 [WARNING] Мало примеров в минорном классе (5). Применяем SMOTE с k_neighbors=4.
+2025-01-05 22:49:07,862 [INFO] После обработки: failure_future
+0    292800
+1    292800
+Name: count, dtype: int64
+2025-01-05 22:49:07,863 [INFO] Используем StratifiedKFold для кросс-валидации
+2025-01-05 22:49:07,864 [INFO] Обучение CatBoostClassifier
+2025-01-05 22:49:07,910 [INFO] Вычисленные веса классов: {0: 1.0, 1: 1.0}
+2025-01-05 22:49:07,946 [INFO] Fold 1/5
+2025-01-05 22:49:13,554 [INFO] Fold 2/5
+2025-01-05 22:49:17,682 [INFO] Fold 3/5
+2025-01-05 22:49:26,557 [INFO] Fold 4/5
+2025-01-05 22:49:30,066 [INFO] Fold 5/5
+2025-01-05 22:49:32,898 [INFO] Обучение LightGBMClassifier
+2025-01-05 22:49:32,938 [INFO] Fold 1/5
+2025-01-05 22:49:33,073 [ERROR] Ошибка при обучении модели: LGBMClassifier.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2025-01-05 22:49:33,073 [ERROR] Ошибка при обучении модели: LGBMClassifier.fit() got an unexpected keyword argument 'early_stopping_rounds'
+Traceback (most recent call last):
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/train.py", line 42, in main
+    model.fit(X_train, y_train)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 110, in fit
+    self._train_model(lgb_model, X_train_res, y_train_res, skf)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 47, in _train_model
+    model.fit(
+TypeError: LGBMClassifier.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2025-01-05 23:07:23,218 [INFO] Загрузка данных...
+2025-01-05 23:07:29,320 [INFO] Данные загружены. Размер: (7320142, 16)
+2025-01-05 23:07:29,320 [INFO] Обработка пропущенных значений...
+2025-01-05 23:07:31,052 [INFO] Пропущенные значения обработаны с помощью KNN Imputer.
+2025-01-05 23:07:31,064 [INFO] Пропущенные значения обработаны.
+2025-01-05 23:07:31,064 [INFO] Начало подготовки признаков...
+2025-01-05 23:07:31,588 [INFO] Создание циклических признаков...
+2025-01-05 23:07:31,683 [INFO] Циклические признаки для month созданы.
+2025-01-05 23:07:31,783 [INFO] Циклические признаки для day_of_week созданы.
+2025-01-05 23:07:31,882 [INFO] Циклические признаки для day_of_month созданы.
+2025-01-05 23:07:31,882 [INFO] Найдено 11 S.M.A.R.T. признаков.
+2025-01-05 23:07:31,882 [INFO] Создание скользящих признаков с окном 7 дней...
+2025-01-05 23:07:34,877 [INFO] Скользящие признаки для smart_5_raw созданы.
+2025-01-05 23:07:37,700 [INFO] Скользящие признаки для smart_9_raw созданы.
+2025-01-05 23:07:40,512 [INFO] Скользящие признаки для smart_187_raw созданы.
+2025-01-05 23:07:43,315 [INFO] Скользящие признаки для smart_188_raw созданы.
+2025-01-05 23:07:46,173 [INFO] Скользящие признаки для smart_192_raw созданы.
+2025-01-05 23:07:48,936 [INFO] Скользящие признаки для smart_197_raw созданы.
+2025-01-05 23:07:51,899 [INFO] Скользящие признаки для smart_198_raw созданы.
+2025-01-05 23:07:54,681 [INFO] Скользящие признаки для smart_199_raw созданы.
+2025-01-05 23:07:57,447 [INFO] Скользящие признаки для smart_240_raw созданы.
+2025-01-05 23:08:00,195 [INFO] Скользящие признаки для smart_241_raw созданы.
+2025-01-05 23:08:02,940 [INFO] Скользящие признаки для smart_242_raw созданы.
+2025-01-05 23:08:02,942 [INFO] Создание скользящих признаков с окном 14 дней...
+2025-01-05 23:08:05,880 [INFO] Скользящие признаки для smart_5_raw созданы.
+2025-01-05 23:08:08,919 [INFO] Скользящие признаки для smart_9_raw созданы.
+2025-01-05 23:08:12,063 [INFO] Скользящие признаки для smart_187_raw созданы.
+2025-01-05 23:08:15,315 [INFO] Скользящие признаки для smart_188_raw созданы.
+2025-01-05 23:08:18,173 [INFO] Скользящие признаки для smart_192_raw созданы.
+2025-01-05 23:08:21,045 [INFO] Скользящие признаки для smart_197_raw созданы.
+2025-01-05 23:08:23,909 [INFO] Скользящие признаки для smart_198_raw созданы.
+2025-01-05 23:08:26,836 [INFO] Скользящие признаки для smart_199_raw созданы.
+2025-01-05 23:08:29,658 [INFO] Скользящие признаки для smart_240_raw созданы.
+2025-01-05 23:08:32,699 [INFO] Скользящие признаки для smart_241_raw созданы.
+2025-01-05 23:08:35,930 [INFO] Скользящие признаки для smart_242_raw созданы.
+2025-01-05 23:08:35,930 [INFO] Создание скользящих признаков с окном 30 дней...
+2025-01-05 23:08:38,865 [INFO] Скользящие признаки для smart_5_raw созданы.
+2025-01-05 23:08:41,948 [INFO] Скользящие признаки для smart_9_raw созданы.
+2025-01-05 23:08:45,133 [INFO] Скользящие признаки для smart_187_raw созданы.
+2025-01-05 23:08:48,148 [INFO] Скользящие признаки для smart_188_raw созданы.
+2025-01-05 23:08:51,098 [INFO] Скользящие признаки для smart_192_raw созданы.
+2025-01-05 23:08:54,300 [INFO] Скользящие признаки для smart_197_raw созданы.
+2025-01-05 23:08:57,357 [INFO] Скользящие признаки для smart_198_raw созданы.
+2025-01-05 23:09:00,453 [INFO] Скользящие признаки для smart_199_raw созданы.
+2025-01-05 23:09:03,655 [INFO] Скользящие признаки для smart_240_raw созданы.
+2025-01-05 23:09:06,980 [INFO] Скользящие признаки для smart_241_raw созданы.
+2025-01-05 23:09:11,079 [INFO] Скользящие признаки для smart_242_raw созданы.
+2025-01-05 23:09:11,080 [INFO] Создание взаимодействующих признаков...
+2025-01-05 23:09:11,259 [INFO] Взаимодействующий признак smart_5_raw_x_smart_9_raw создан.
+2025-01-05 23:09:11,400 [INFO] Взаимодействующий признак smart_187_raw_x_smart_188_raw создан.
+2025-01-05 23:09:11,490 [INFO] Взаимодействующий признак smart_192_raw_x_smart_197_raw создан.
+2025-01-05 23:09:11,677 [INFO] Взаимодействующий признак smart_198_raw_x_smart_199_raw создан.
+2025-01-05 23:09:12,106 [INFO] Взаимодействующий признак smart_240_raw_x_smart_241_raw создан.
+2025-01-05 23:09:12,428 [INFO] Взаимодействующий признак smart_242_raw_x_capacity_bytes создан.
+2025-01-05 23:09:13,285 [INFO] Категориальный признак 'model' закодирован.
+2025-01-05 23:09:13,658 [INFO] Распределение классов после создания целевого признака:
+2025-01-05 23:09:13,684 [INFO] failure_future
+0    7319970
+1        172
+Name: count, dtype: int64
+2025-01-05 23:09:13,685 [INFO] Подготовка признаков завершена. Итоговое количество признаков: 100
+2025-01-05 23:09:13,685 [INFO] Признаки подготовлены.
+2025-01-05 23:09:31,105 [INFO] Данные разделены на обучающую и тестовую выборки. Обучающая: (5856113, 95), Тестовая: (1464029, 95)
+2025-01-05 23:09:31,106 [INFO] Начало обучения ансамбля моделей...
+2025-01-05 23:09:31,126 [INFO] Количество примеров в каждом классе: 
+failure_future
+0    5855975
+1        138
+Name: count, dtype: int64
+2025-01-05 23:09:31,127 [INFO] Применяем SMOTE с дефолтными параметрами.
+2025-01-05 23:14:17,176 [INFO] После обработки: failure_future
+0    5855975
+1    5855975
+Name: count, dtype: int64
+2025-01-05 23:14:17,180 [INFO] Используем StratifiedKFold для кросс-валидации
+2025-01-05 23:14:17,215 [INFO] Обучение CatBoostClassifier
+2025-01-05 23:14:18,235 [INFO] Вычисленные веса классов: {0: 1.0, 1: 1.0}
+2025-01-05 23:14:19,170 [INFO] Fold 1/5
+2025-01-05 23:14:43,560 [ERROR] Ошибка при обучении модели: only one of the parameters random_seed, random_state should be initialized.
+Traceback (most recent call last):
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/train.py", line 42, in main
+    model.fit(X_train, y_train)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 115, in fit
+    self._train_model(catboost_model, X_train_res, y_train_res, skf)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 40, in _train_model
+    model.fit(
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/catboost/core.py", line 5241, in fit
+    _process_synonyms(params)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/catboost/core.py", line 1618, in _process_synonyms
+    _process_synonyms_groups(params)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/catboost/core.py", line 1575, in _process_synonyms_groups
+    _process_synonyms_group(['random_seed', 'random_state'], params)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/catboost/core.py", line 1562, in _process_synonyms_group
+    raise CatBoostError('only one of the parameters ' + (', '.join(synonyms)) + ' should be initialized.')
+_catboost.CatBoostError: only one of the parameters random_seed, random_state should be initialized.
+2025-01-05 23:20:32,693 [INFO] Загрузка данных...
+2025-01-05 23:20:38,061 [INFO] Данные загружены. Размер: (7320142, 16)
+2025-01-05 23:20:38,061 [INFO] Обработка пропущенных значений...
+2025-01-05 23:20:39,202 [INFO] Пропущенные значения обработаны с помощью KNN Imputer.
+2025-01-05 23:20:39,210 [INFO] Пропущенные значения обработаны.
+2025-01-05 23:20:39,210 [INFO] Начало подготовки признаков...
+2025-01-05 23:20:39,705 [INFO] Создание циклических признаков...
+2025-01-05 23:20:39,801 [INFO] Циклические признаки для month созданы.
+2025-01-05 23:20:39,899 [INFO] Циклические признаки для day_of_week созданы.
+2025-01-05 23:20:40,004 [INFO] Циклические признаки для day_of_month созданы.
+2025-01-05 23:20:40,004 [INFO] Найдено 11 S.M.A.R.T. признаков.
+2025-01-05 23:20:40,004 [INFO] Создание скользящих признаков с окном 7 дней...
+2025-01-05 23:20:42,736 [INFO] Скользящие признаки для smart_5_raw созданы.
+2025-01-05 23:20:45,427 [INFO] Скользящие признаки для smart_9_raw созданы.
+2025-01-05 23:20:48,137 [INFO] Скользящие признаки для smart_187_raw созданы.
+2025-01-05 23:20:50,938 [INFO] Скользящие признаки для smart_188_raw созданы.
+2025-01-05 23:20:53,652 [INFO] Скользящие признаки для smart_192_raw созданы.
+2025-01-05 23:20:56,377 [INFO] Скользящие признаки для smart_197_raw созданы.
+2025-01-05 23:20:59,096 [INFO] Скользящие признаки для smart_198_raw созданы.
+2025-01-05 23:21:01,882 [INFO] Скользящие признаки для smart_199_raw созданы.
+2025-01-05 23:21:04,736 [INFO] Скользящие признаки для smart_240_raw созданы.
+2025-01-05 23:21:07,532 [INFO] Скользящие признаки для smart_241_raw созданы.
+2025-01-05 23:21:10,341 [INFO] Скользящие признаки для smart_242_raw созданы.
+2025-01-05 23:21:10,341 [INFO] Создание скользящих признаков с окном 14 дней...
+2025-01-05 23:21:13,139 [INFO] Скользящие признаки для smart_5_raw созданы.
+2025-01-05 23:21:15,944 [INFO] Скользящие признаки для smart_9_raw созданы.
+2025-01-05 23:21:18,635 [INFO] Скользящие признаки для smart_187_raw созданы.
+2025-01-05 23:21:21,348 [INFO] Скользящие признаки для smart_188_raw созданы.
+2025-01-05 23:21:24,152 [INFO] Скользящие признаки для smart_192_raw созданы.
+2025-01-05 23:21:26,941 [INFO] Скользящие признаки для smart_197_raw созданы.
+2025-01-05 23:21:29,668 [INFO] Скользящие признаки для smart_198_raw созданы.
+2025-01-05 23:21:32,464 [INFO] Скользящие признаки для smart_199_raw созданы.
+2025-01-05 23:21:35,289 [INFO] Скользящие признаки для smart_240_raw созданы.
+2025-01-05 23:21:38,147 [INFO] Скользящие признаки для smart_241_raw созданы.
+2025-01-05 23:21:40,922 [INFO] Скользящие признаки для smart_242_raw созданы.
+2025-01-05 23:21:40,922 [INFO] Создание скользящих признаков с окном 30 дней...
+2025-01-05 23:21:43,714 [INFO] Скользящие признаки для smart_5_raw созданы.
+2025-01-05 23:21:46,469 [INFO] Скользящие признаки для smart_9_raw созданы.
+2025-01-05 23:21:49,216 [INFO] Скользящие признаки для smart_187_raw созданы.
+2025-01-05 23:21:51,970 [INFO] Скользящие признаки для smart_188_raw созданы.
+2025-01-05 23:21:54,731 [INFO] Скользящие признаки для smart_192_raw созданы.
+2025-01-05 23:21:57,580 [INFO] Скользящие признаки для smart_197_raw созданы.
+2025-01-05 23:22:00,603 [INFO] Скользящие признаки для smart_198_raw созданы.
+2025-01-05 23:22:03,419 [INFO] Скользящие признаки для smart_199_raw созданы.
+2025-01-05 23:22:06,144 [INFO] Скользящие признаки для smart_240_raw созданы.
+2025-01-05 23:22:08,898 [INFO] Скользящие признаки для smart_241_raw созданы.
+2025-01-05 23:22:11,713 [INFO] Скользящие признаки для smart_242_raw созданы.
+2025-01-05 23:22:11,714 [INFO] Создание взаимодействующих признаков...
+2025-01-05 23:22:11,732 [INFO] Взаимодействующий признак smart_5_raw_x_smart_9_raw создан.
+2025-01-05 23:22:11,757 [INFO] Взаимодействующий признак smart_187_raw_x_smart_188_raw создан.
+2025-01-05 23:22:11,780 [INFO] Взаимодействующий признак smart_192_raw_x_smart_197_raw создан.
+2025-01-05 23:22:11,802 [INFO] Взаимодействующий признак smart_198_raw_x_smart_199_raw создан.
+2025-01-05 23:22:11,819 [INFO] Взаимодействующий признак smart_240_raw_x_smart_241_raw создан.
+2025-01-05 23:22:11,839 [INFO] Взаимодействующий признак smart_242_raw_x_capacity_bytes создан.
+2025-01-05 23:22:12,400 [INFO] Категориальный признак 'model' закодирован.
+2025-01-05 23:22:12,687 [INFO] Распределение классов после создания целевого признака:
+2025-01-05 23:22:12,707 [INFO] failure_future
+0    7319970
+1        172
+Name: count, dtype: int64
+2025-01-05 23:22:12,709 [INFO] Подготовка признаков завершена. Итоговое количество признаков: 100
+2025-01-05 23:22:12,709 [INFO] Признаки подготовлены.
+2025-01-05 23:22:15,495 [INFO] Количество признаков для модели: 95
+2025-01-05 23:22:29,149 [INFO] Данные разделены на обучающую (5856113 образцов) и тестовую (1464029 образцов) выборки.
+2025-01-05 23:22:29,150 [INFO] Начало обучения ансамбля моделей...
+2025-01-05 23:22:29,638 [INFO] Вычисленные веса классов: {0: 0.5000117828371876, 1: 21217.80072463768}
+2025-01-05 23:27:13,381 [INFO] Данные после ресемплинга: (11711950, 95), (11711950,)
+2025-01-05 23:27:13,387 [INFO] Обучение CatBoostClassifier
+2025-01-05 23:27:14,351 [INFO] Fold 1/5
+2025-01-05 23:32:34,367 [INFO] Fold 2/5
+2025-01-05 23:38:22,641 [INFO] Fold 3/5
+2025-01-05 23:41:40,809 [INFO] Fold 4/5
+2025-01-05 23:47:00,669 [INFO] Fold 5/5
+2025-01-05 23:51:36,043 [INFO] Обучение LGBMClassifier
+2025-01-05 23:51:36,886 [INFO] Fold 1/5
+2025-01-05 23:51:55,527 [ERROR] Ошибка при обучении модели: LGBMClassifier.fit() got an unexpected keyword argument 'verbose'
+2025-01-05 23:51:55,540 [ERROR] Ошибка при обучении модели: LGBMClassifier.fit() got an unexpected keyword argument 'verbose'
+Traceback (most recent call last):
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/train.py", line 43, in main
+    model.fit(X_train, y_train)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 76, in fit
+    self._train_model(lgbm_model, X_train_res, y_train_res, skf)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 39, in _train_model
+    model.fit(
+TypeError: LGBMClassifier.fit() got an unexpected keyword argument 'verbose'
+2025-01-05 23:58:10,537 [INFO] Загрузка данных...
+2025-01-05 23:58:15,346 [INFO] Данные загружены. Размер: (7320142, 16)
+2025-01-05 23:58:15,346 [INFO] Обработка пропущенных значений...
+2025-01-05 23:58:16,196 [INFO] Пропущенные значения обработаны с помощью KNN Imputer.
+2025-01-05 23:58:16,208 [INFO] Пропущенные значения обработаны.
+2025-01-05 23:58:16,208 [INFO] Начало подготовки признаков...
+2025-01-05 23:58:16,662 [INFO] Создание циклических признаков...
+2025-01-05 23:58:16,757 [INFO] Циклические признаки для month созданы.
+2025-01-05 23:58:16,847 [INFO] Циклические признаки для day_of_week созданы.
+2025-01-05 23:58:16,945 [INFO] Циклические признаки для day_of_month созданы.
+2025-01-05 23:58:16,945 [INFO] Найдено 11 S.M.A.R.T. признаков.
+2025-01-05 23:58:16,945 [INFO] Создание скользящих признаков с окном 7 дней...
+2025-01-05 23:58:19,433 [INFO] Скользящие признаки для smart_5_raw созданы.
+2025-01-05 23:58:21,900 [INFO] Скользящие признаки для smart_9_raw созданы.
+2025-01-05 23:58:24,442 [INFO] Скользящие признаки для smart_187_raw созданы.
+2025-01-05 23:58:26,924 [INFO] Скользящие признаки для smart_188_raw созданы.
+2025-01-05 23:58:29,406 [INFO] Скользящие признаки для smart_192_raw созданы.
+2025-01-05 23:58:31,907 [INFO] Скользящие признаки для smart_197_raw созданы.
+2025-01-05 23:58:34,398 [INFO] Скользящие признаки для smart_198_raw созданы.
+2025-01-05 23:58:36,867 [INFO] Скользящие признаки для smart_199_raw созданы.
+2025-01-05 23:58:39,348 [INFO] Скользящие признаки для smart_240_raw созданы.
+2025-01-05 23:58:41,826 [INFO] Скользящие признаки для smart_241_raw созданы.
+2025-01-05 23:58:44,337 [INFO] Скользящие признаки для smart_242_raw созданы.
+2025-01-05 23:58:44,337 [INFO] Создание скользящих признаков с окном 14 дней...
+2025-01-05 23:58:46,833 [INFO] Скользящие признаки для smart_5_raw созданы.
+2025-01-05 23:58:49,302 [INFO] Скользящие признаки для smart_9_raw созданы.
+2025-01-05 23:58:51,762 [INFO] Скользящие признаки для smart_187_raw созданы.
+2025-01-05 23:58:54,256 [INFO] Скользящие признаки для smart_188_raw созданы.
+2025-01-05 23:58:56,746 [INFO] Скользящие признаки для smart_192_raw созданы.
+2025-01-05 23:58:59,245 [INFO] Скользящие признаки для smart_197_raw созданы.
+2025-01-05 23:59:01,739 [INFO] Скользящие признаки для smart_198_raw созданы.
+2025-01-05 23:59:04,240 [INFO] Скользящие признаки для smart_199_raw созданы.
+2025-01-05 23:59:06,749 [INFO] Скользящие признаки для smart_240_raw созданы.
+2025-01-05 23:59:09,272 [INFO] Скользящие признаки для smart_241_raw созданы.
+2025-01-05 23:59:11,795 [INFO] Скользящие признаки для smart_242_raw созданы.
+2025-01-05 23:59:11,795 [INFO] Создание скользящих признаков с окном 30 дней...
+2025-01-05 23:59:14,305 [INFO] Скользящие признаки для smart_5_raw созданы.
+2025-01-05 23:59:16,815 [INFO] Скользящие признаки для smart_9_raw созданы.
+2025-01-05 23:59:19,327 [INFO] Скользящие признаки для smart_187_raw созданы.
+2025-01-05 23:59:21,851 [INFO] Скользящие признаки для smart_188_raw созданы.
+2025-01-05 23:59:24,371 [INFO] Скользящие признаки для smart_192_raw созданы.
+2025-01-05 23:59:26,888 [INFO] Скользящие признаки для smart_197_raw созданы.
+2025-01-05 23:59:29,413 [INFO] Скользящие признаки для smart_198_raw созданы.
+2025-01-05 23:59:31,971 [INFO] Скользящие признаки для smart_199_raw созданы.
+2025-01-05 23:59:34,523 [INFO] Скользящие признаки для smart_240_raw созданы.
+2025-01-05 23:59:37,064 [INFO] Скользящие признаки для smart_241_raw созданы.
+2025-01-05 23:59:39,590 [INFO] Скользящие признаки для smart_242_raw созданы.
+2025-01-05 23:59:39,590 [INFO] Создание взаимодействующих признаков...
+2025-01-05 23:59:39,601 [INFO] Взаимодействующий признак smart_5_raw_x_smart_9_raw создан.
+2025-01-05 23:59:39,612 [INFO] Взаимодействующий признак smart_187_raw_x_smart_188_raw создан.
+2025-01-05 23:59:39,626 [INFO] Взаимодействующий признак smart_192_raw_x_smart_197_raw создан.
+2025-01-05 23:59:39,640 [INFO] Взаимодействующий признак smart_198_raw_x_smart_199_raw создан.
+2025-01-05 23:59:39,652 [INFO] Взаимодействующий признак smart_240_raw_x_smart_241_raw создан.
+2025-01-05 23:59:39,666 [INFO] Взаимодействующий признак smart_242_raw_x_capacity_bytes создан.
+2025-01-05 23:59:40,170 [INFO] Категориальный признак 'model' закодирован.
+2025-01-05 23:59:40,445 [INFO] Распределение классов после создания целевого признака:
+2025-01-05 23:59:40,465 [INFO] failure_future
+0    7319970
+1        172
+Name: count, dtype: int64
+2025-01-05 23:59:40,465 [INFO] Подготовка признаков завершена. Итоговое количество признаков: 100
+2025-01-05 23:59:40,465 [INFO] Признаки подготовлены.
+2025-01-05 23:59:42,428 [INFO] Количество признаков для модели: 95
+2025-01-05 23:59:55,337 [INFO] Данные разделены на обучающую (5856113 образцов) и тестовую (1464029 образцов) выборки.
+2025-01-05 23:59:55,339 [INFO] Начало обучения ансамбля моделей...
+2025-01-05 23:59:55,817 [INFO] Вычисленные веса классов: {0: 0.5000117828371876, 1: 21217.80072463768}
+2025-01-06 00:01:58,504 [INFO] Данные после ресемплинга: (11711950, 95), (11711950,)
+2025-01-06 00:01:58,525 [INFO] Обучение CatBoostClassifier
+2025-01-06 00:01:59,331 [INFO] Fold 1/5
+2025-01-06 00:05:13,800 [INFO] Fold 1 завершён. ROC AUC: 1.0000
+2025-01-06 00:05:14,095 [INFO] Fold 2/5
+2025-01-06 00:10:22,158 [INFO] Fold 2 завершён. ROC AUC: 1.0000
+2025-01-06 00:10:22,499 [INFO] Fold 3/5
+2025-01-06 00:13:32,376 [INFO] Fold 3 завершён. ROC AUC: 1.0000
+2025-01-06 00:13:32,672 [INFO] Fold 4/5
+2025-01-06 00:35:32,439 [INFO] Fold 4 завершён. ROC AUC: 1.0000
+2025-01-06 00:35:32,738 [INFO] Fold 5/5
+2025-01-06 04:55:11,077 [INFO] Fold 5 завершён. ROC AUC: 1.0000
+2025-01-06 04:55:11,571 [INFO] CatBoostClassifier обучен и добавлен в ансамбль.
+2025-01-06 04:55:11,572 [INFO] Обучение LGBMClassifier
+2025-01-06 04:55:12,423 [INFO] Fold 1/5
+2025-01-06 05:13:19,446 [ERROR] Ошибка при обучении LGBMClassifier на фолде 1: LGBMClassifier.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2025-01-06 05:13:19,462 [ERROR] Ошибка при обучении модели: LGBMClassifier.fit() got an unexpected keyword argument 'early_stopping_rounds'
+Traceback (most recent call last):
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/train.py", line 43, in main
+    model.fit(X_train, y_train)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 73, in fit
+    oof_preds = self._train_model(model, X_res, y_res, skf)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 48, in _train_model
+    raise e
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 39, in _train_model
+    model.fit(
+TypeError: LGBMClassifier.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2025-01-06 12:52:55,788 [INFO] Загрузка данных...
+2025-01-06 12:53:00,789 [INFO] Данные загружены. Размер: (7320142, 16)
+2025-01-06 12:53:00,789 [INFO] Обработка пропущенных значений...
+2025-01-06 12:53:01,972 [INFO] Пропущенные значения обработаны с помощью KNN Imputer.
+2025-01-06 12:53:01,980 [INFO] Пропущенные значения обработаны.
+2025-01-06 12:53:01,980 [INFO] Начало подготовки признаков...
+2025-01-06 12:53:02,466 [INFO] Создание циклических признаков...
+2025-01-06 12:53:02,565 [INFO] Циклические признаки для month созданы.
+2025-01-06 12:53:02,664 [INFO] Циклические признаки для day_of_week созданы.
+2025-01-06 12:53:02,766 [INFO] Циклические признаки для day_of_month созданы.
+2025-01-06 12:53:02,766 [INFO] Найдено 11 S.M.A.R.T. признаков.
+2025-01-06 12:53:02,766 [INFO] Создание скользящих признаков с окном 7 дней...
+2025-01-06 12:53:05,402 [INFO] Скользящие признаки для smart_5_raw созданы.
+2025-01-06 12:53:07,917 [INFO] Скользящие признаки для smart_9_raw созданы.
+2025-01-06 12:53:10,434 [INFO] Скользящие признаки для smart_187_raw созданы.
+2025-01-06 12:53:12,937 [INFO] Скользящие признаки для smart_188_raw созданы.
+2025-01-06 12:53:15,424 [INFO] Скользящие признаки для smart_192_raw созданы.
+2025-01-06 12:53:17,907 [INFO] Скользящие признаки для smart_197_raw созданы.
+2025-01-06 12:53:20,420 [INFO] Скользящие признаки для smart_198_raw созданы.
+2025-01-06 12:53:22,891 [INFO] Скользящие признаки для smart_199_raw созданы.
+2025-01-06 12:53:25,388 [INFO] Скользящие признаки для smart_240_raw созданы.
+2025-01-06 12:53:27,893 [INFO] Скользящие признаки для smart_241_raw созданы.
+2025-01-06 12:53:30,438 [INFO] Скользящие признаки для smart_242_raw созданы.
+2025-01-06 12:53:30,438 [INFO] Создание скользящих признаков с окном 14 дней...
+2025-01-06 12:53:32,940 [INFO] Скользящие признаки для smart_5_raw созданы.
+2025-01-06 12:53:35,437 [INFO] Скользящие признаки для smart_9_raw созданы.
+2025-01-06 12:53:37,953 [INFO] Скользящие признаки для smart_187_raw созданы.
+2025-01-06 12:53:40,476 [INFO] Скользящие признаки для smart_188_raw созданы.
+2025-01-06 12:53:42,984 [INFO] Скользящие признаки для smart_192_raw созданы.
+2025-01-06 12:53:45,489 [INFO] Скользящие признаки для smart_197_raw созданы.
+2025-01-06 12:53:47,985 [INFO] Скользящие признаки для smart_198_raw созданы.
+2025-01-06 12:53:50,518 [INFO] Скользящие признаки для smart_199_raw созданы.
+2025-01-06 12:53:53,022 [INFO] Скользящие признаки для smart_240_raw созданы.
+2025-01-06 12:53:55,562 [INFO] Скользящие признаки для smart_241_raw созданы.
+2025-01-06 12:53:58,101 [INFO] Скользящие признаки для smart_242_raw созданы.
+2025-01-06 12:53:58,101 [INFO] Создание скользящих признаков с окном 30 дней...
+2025-01-06 12:54:00,639 [INFO] Скользящие признаки для smart_5_raw созданы.
+2025-01-06 12:54:03,154 [INFO] Скользящие признаки для smart_9_raw созданы.
+2025-01-06 12:54:05,692 [INFO] Скользящие признаки для smart_187_raw созданы.
+2025-01-06 12:54:08,247 [INFO] Скользящие признаки для smart_188_raw созданы.
+2025-01-06 12:54:10,787 [INFO] Скользящие признаки для smart_192_raw созданы.
+2025-01-06 12:54:13,329 [INFO] Скользящие признаки для smart_197_raw созданы.
+2025-01-06 12:54:15,913 [INFO] Скользящие признаки для smart_198_raw созданы.
+2025-01-06 12:54:18,465 [INFO] Скользящие признаки для smart_199_raw созданы.
+2025-01-06 12:54:21,008 [INFO] Скользящие признаки для smart_240_raw созданы.
+2025-01-06 12:54:23,579 [INFO] Скользящие признаки для smart_241_raw созданы.
+2025-01-06 12:54:26,132 [INFO] Скользящие признаки для smart_242_raw созданы.
+2025-01-06 12:54:26,133 [INFO] Создание взаимодействующих признаков...
+2025-01-06 12:54:26,151 [INFO] Взаимодействующий признак smart_5_raw_x_smart_9_raw создан.
+2025-01-06 12:54:26,172 [INFO] Взаимодействующий признак smart_187_raw_x_smart_188_raw создан.
+2025-01-06 12:54:26,189 [INFO] Взаимодействующий признак smart_192_raw_x_smart_197_raw создан.
+2025-01-06 12:54:26,201 [INFO] Взаимодействующий признак smart_198_raw_x_smart_199_raw создан.
+2025-01-06 12:54:26,214 [INFO] Взаимодействующий признак smart_240_raw_x_smart_241_raw создан.
+2025-01-06 12:54:26,231 [INFO] Взаимодействующий признак smart_242_raw_x_capacity_bytes создан.
+2025-01-06 12:54:26,742 [INFO] Категориальный признак 'model' закодирован.
+2025-01-06 12:54:27,009 [INFO] Распределение классов после создания целевого признака:
+2025-01-06 12:54:27,030 [INFO] failure_future
+0    7319970
+1        172
+Name: count, dtype: int64
+2025-01-06 12:54:27,030 [INFO] Подготовка признаков завершена. Итоговое количество признаков: 100
+2025-01-06 12:54:27,030 [INFO] Признаки подготовлены.
+2025-01-06 12:54:28,777 [INFO] Количество признаков для модели: 95
+2025-01-06 12:54:41,199 [INFO] Данные разделены на обучающую (5856113 образцов) и тестовую (1464029 образцов) выборки.
+2025-01-06 12:54:41,717 [INFO] Вычисленные веса классов: {0: 0.5000117828371876, 1: 21217.80072463768}
+2025-01-06 12:54:41,717 [INFO] Обучение модели: CatBoostClassifier
+2025-01-06 12:54:42,169 [INFO] Фолд 1/5
+2025-01-06 12:54:58,906 [INFO] ROC AUC для фолда 1: 0.9010
+2025-01-06 12:54:58,987 [INFO] Фолд 2/5
+2025-01-06 12:55:18,681 [INFO] ROC AUC для фолда 2: 0.8496
+2025-01-06 12:55:18,763 [INFO] Фолд 3/5
+2025-01-06 12:56:14,899 [INFO] ROC AUC для фолда 3: 0.8645
+2025-01-06 12:56:14,984 [INFO] Фолд 4/5
+2025-01-06 12:56:29,333 [INFO] ROC AUC для фолда 4: 0.8770
+2025-01-06 12:56:29,413 [INFO] Фолд 5/5
+2025-01-06 12:57:03,970 [INFO] ROC AUC для фолда 5: 0.9155
+2025-01-06 12:57:04,091 [INFO] Обучение модели: LGBMClassifier
+2025-01-06 12:57:04,518 [INFO] Фолд 1/5
+2025-01-06 12:57:07,190 [ERROR] Ошибка при обучении модели LGBMClassifier на фолде 1: LGBMClassifier.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2025-01-06 12:57:07,193 [ERROR] Ошибка при обучении модели: LGBMClassifier.fit() got an unexpected keyword argument 'early_stopping_rounds'
+Traceback (most recent call last):
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/train.py", line 43, in main
+    model.fit(X_train, y_train)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 75, in fit
+    oof_preds = self._train_model(model, X, y, skf)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 64, in _train_model
+    raise e
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 51, in _train_model
+    model.fit(
+TypeError: LGBMClassifier.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2025-01-06 15:08:23,618 [INFO] Загрузка данных...
+2025-01-06 15:08:28,710 [INFO] Данные загружены. Размер: (7320142, 16)
+2025-01-06 15:08:28,710 [INFO] Обработка пропущенных значений...
+2025-01-06 15:08:29,989 [INFO] Пропущенные значения обработаны с помощью KNN Imputer.
+2025-01-06 15:08:30,001 [INFO] Пропущенные значения обработаны.
+2025-01-06 15:08:30,001 [INFO] Начало подготовки признаков...
+2025-01-06 15:08:30,489 [INFO] Создание циклических признаков...
+2025-01-06 15:08:30,587 [INFO] Циклические признаки для month созданы.
+2025-01-06 15:08:30,682 [INFO] Циклические признаки для day_of_week созданы.
+2025-01-06 15:08:30,785 [INFO] Циклические признаки для day_of_month созданы.
+2025-01-06 15:08:30,785 [INFO] Найдено 11 S.M.A.R.T. признаков.
+2025-01-06 15:08:30,785 [INFO] Создание скользящих признаков с окном 7 дней...
+2025-01-06 15:08:33,394 [INFO] Скользящие признаки для smart_5_raw созданы.
+2025-01-06 15:08:35,980 [INFO] Скользящие признаки для smart_9_raw созданы.
+2025-01-06 15:08:38,520 [INFO] Скользящие признаки для smart_187_raw созданы.
+2025-01-06 15:08:41,199 [INFO] Скользящие признаки для smart_188_raw созданы.
+2025-01-06 15:08:43,783 [INFO] Скользящие признаки для smart_192_raw созданы.
+2025-01-06 15:08:46,308 [INFO] Скользящие признаки для smart_197_raw созданы.
+2025-01-06 15:08:48,820 [INFO] Скользящие признаки для smart_198_raw созданы.
+2025-01-06 15:08:51,375 [INFO] Скользящие признаки для smart_199_raw созданы.
+2025-01-06 15:08:54,012 [INFO] Скользящие признаки для smart_240_raw созданы.
+2025-01-06 15:08:56,713 [INFO] Скользящие признаки для smart_241_raw созданы.
+2025-01-06 15:08:59,436 [INFO] Скользящие признаки для smart_242_raw созданы.
+2025-01-06 15:08:59,437 [INFO] Создание скользящих признаков с окном 14 дней...
+2025-01-06 15:09:02,086 [INFO] Скользящие признаки для smart_5_raw созданы.
+2025-01-06 15:09:04,677 [INFO] Скользящие признаки для smart_9_raw созданы.
+2025-01-06 15:09:07,306 [INFO] Скользящие признаки для smart_187_raw созданы.
+2025-01-06 15:09:10,013 [INFO] Скользящие признаки для smart_188_raw созданы.
+2025-01-06 15:09:12,613 [INFO] Скользящие признаки для smart_192_raw созданы.
+2025-01-06 15:09:15,212 [INFO] Скользящие признаки для smart_197_raw созданы.
+2025-01-06 15:09:17,890 [INFO] Скользящие признаки для smart_198_raw созданы.
+2025-01-06 15:09:20,547 [INFO] Скользящие признаки для smart_199_raw созданы.
+2025-01-06 15:09:23,235 [INFO] Скользящие признаки для smart_240_raw созданы.
+2025-01-06 15:09:25,879 [INFO] Скользящие признаки для smart_241_raw созданы.
+2025-01-06 15:09:28,537 [INFO] Скользящие признаки для smart_242_raw созданы.
+2025-01-06 15:09:28,537 [INFO] Создание скользящих признаков с окном 30 дней...
+2025-01-06 15:09:31,148 [INFO] Скользящие признаки для smart_5_raw созданы.
+2025-01-06 15:09:33,718 [INFO] Скользящие признаки для smart_9_raw созданы.
+2025-01-06 15:09:36,291 [INFO] Скользящие признаки для smart_187_raw созданы.
+2025-01-06 15:09:38,965 [INFO] Скользящие признаки для smart_188_raw созданы.
+2025-01-06 15:09:41,586 [INFO] Скользящие признаки для smart_192_raw созданы.
+2025-01-06 15:09:44,236 [INFO] Скользящие признаки для smart_197_raw созданы.
+2025-01-06 15:09:46,880 [INFO] Скользящие признаки для smart_198_raw созданы.
+2025-01-06 15:09:49,498 [INFO] Скользящие признаки для smart_199_raw созданы.
+2025-01-06 15:09:52,116 [INFO] Скользящие признаки для smart_240_raw созданы.
+2025-01-06 15:09:54,753 [INFO] Скользящие признаки для smart_241_raw созданы.
+2025-01-06 15:09:57,497 [INFO] Скользящие признаки для smart_242_raw созданы.
+2025-01-06 15:09:57,497 [INFO] Создание взаимодействующих признаков...
+2025-01-06 15:09:57,516 [INFO] Взаимодействующий признак smart_5_raw_x_smart_9_raw создан.
+2025-01-06 15:09:57,536 [INFO] Взаимодействующий признак smart_187_raw_x_smart_188_raw создан.
+2025-01-06 15:09:57,556 [INFO] Взаимодействующий признак smart_192_raw_x_smart_197_raw создан.
+2025-01-06 15:09:57,575 [INFO] Взаимодействующий признак smart_198_raw_x_smart_199_raw создан.
+2025-01-06 15:09:57,588 [INFO] Взаимодействующий признак smart_240_raw_x_smart_241_raw создан.
+2025-01-06 15:09:57,607 [INFO] Взаимодействующий признак smart_242_raw_x_capacity_bytes создан.
+2025-01-06 15:09:58,135 [INFO] Категориальный признак 'model' закодирован.
+2025-01-06 15:09:58,599 [INFO] Распределение классов после создания целевого признака:
+2025-01-06 15:09:58,618 [INFO] failure_future
+0    7319970
+1        172
+Name: count, dtype: int64
+2025-01-06 15:09:58,618 [INFO] Подготовка признаков завершена. Итоговое количество признаков: 100
+2025-01-06 15:09:58,618 [INFO] Признаки подготовлены.
+2025-01-06 15:10:01,496 [INFO] Количество признаков для модели: 95
+2025-01-06 15:10:14,606 [INFO] Данные разделены на обучающую (5856113 образцов) и тестовую (1464029 образцов) выборки.
+2025-01-06 15:10:14,607 [INFO] Начало обучения ансамбля моделей...
+2025-01-06 15:10:15,091 [INFO] Вычисленные веса классов: {0: 0.5000117828371876, 1: 21217.80072463768}
+2025-01-06 15:13:31,788 [INFO] Данные после ресемплинга: (11711950, 95), (11711950,)
+2025-01-06 15:13:31,813 [INFO] Обучение CatBoostClassifier
+2025-01-06 15:13:32,661 [INFO] Фолд 1/5
+2025-01-06 15:17:12,236 [INFO] ROC AUC для фолда 1: 1.0000
+2025-01-06 15:17:12,516 [INFO] Фолд 2/5
+2025-01-06 15:22:51,105 [INFO] ROC AUC для фолда 2: 1.0000
+2025-01-06 15:22:51,404 [INFO] Фолд 3/5
+2025-01-06 15:26:16,168 [INFO] ROC AUC для фолда 3: 1.0000
+2025-01-06 15:26:16,498 [INFO] Фолд 4/5
+2025-01-06 15:31:40,064 [INFO] ROC AUC для фолда 4: 1.0000
+2025-01-06 15:31:40,382 [INFO] Фолд 5/5
+2025-01-06 15:36:33,739 [INFO] ROC AUC для фолда 5: 1.0000
+2025-01-06 15:36:34,200 [INFO] CatBoostClassifier обучен и добавлен в ансамбль.
+2025-01-06 15:36:34,200 [INFO] Обучение LGBMClassifier
+2025-01-06 15:36:35,054 [INFO] Фолд 1/5
+2025-01-06 15:36:58,281 [ERROR] TypeError при обучении модели LGBMClassifier на фолде 1: LGBMClassifier.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2025-01-06 15:36:58,289 [ERROR] Ошибка при обучении модели: LGBMClassifier.fit() got an unexpected keyword argument 'early_stopping_rounds'
+Traceback (most recent call last):
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/train.py", line 43, in main
+    model.fit(X_train, y_train)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 96, in fit
+    oof_preds = self._train_model(model, X_res, y_res, skf)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 67, in _train_model
+    raise te
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 52, in _train_model
+    model.fit(
+TypeError: LGBMClassifier.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2025-01-06 15:44:42,236 [INFO] Загрузка данных...
+2025-01-06 15:44:47,086 [INFO] Данные загружены. Размер: (7320142, 16)
+2025-01-06 15:44:47,086 [INFO] Обработка пропущенных значений...
+2025-01-06 15:44:48,012 [INFO] Пропущенные значения обработаны с помощью KNN Imputer.
+2025-01-06 15:44:48,025 [INFO] Пропущенные значения обработаны.
+2025-01-06 15:44:48,025 [INFO] Начало подготовки признаков...
+2025-01-06 15:44:48,483 [INFO] Создание циклических признаков...
+2025-01-06 15:44:48,580 [INFO] Циклические признаки для month созданы.
+2025-01-06 15:44:48,671 [INFO] Циклические признаки для day_of_week созданы.
+2025-01-06 15:44:48,771 [INFO] Циклические признаки для day_of_month созданы.
+2025-01-06 15:44:48,771 [INFO] Найдено 11 S.M.A.R.T. признаков.
+2025-01-06 15:44:48,771 [INFO] Создание скользящих признаков с окном 7 дней...
+2025-01-06 15:44:51,451 [INFO] Скользящие признаки для smart_5_raw созданы.
+2025-01-06 15:44:54,051 [INFO] Скользящие признаки для smart_9_raw созданы.
+2025-01-06 15:44:56,645 [INFO] Скользящие признаки для smart_187_raw созданы.
+2025-01-06 15:44:59,232 [INFO] Скользящие признаки для smart_188_raw созданы.
+2025-01-06 15:45:01,798 [INFO] Скользящие признаки для smart_192_raw созданы.
+2025-01-06 15:45:04,392 [INFO] Скользящие признаки для smart_197_raw созданы.
+2025-01-06 15:45:07,180 [INFO] Скользящие признаки для smart_198_raw созданы.
+2025-01-06 15:45:09,862 [INFO] Скользящие признаки для smart_199_raw созданы.
+2025-01-06 15:45:12,523 [INFO] Скользящие признаки для smart_240_raw созданы.
+2025-01-06 15:45:15,153 [INFO] Скользящие признаки для smart_241_raw созданы.
+2025-01-06 15:45:17,770 [INFO] Скользящие признаки для smart_242_raw созданы.
+2025-01-06 15:45:17,770 [INFO] Создание скользящих признаков с окном 14 дней...
+2025-01-06 15:45:20,345 [INFO] Скользящие признаки для smart_5_raw созданы.
+2025-01-06 15:45:22,967 [INFO] Скользящие признаки для smart_9_raw созданы.
+2025-01-06 15:45:25,582 [INFO] Скользящие признаки для smart_187_raw созданы.
+2025-01-06 15:45:28,203 [INFO] Скользящие признаки для smart_188_raw созданы.
+2025-01-06 15:45:30,823 [INFO] Скользящие признаки для smart_192_raw созданы.
+2025-01-06 15:45:33,431 [INFO] Скользящие признаки для smart_197_raw созданы.
+2025-01-06 15:45:36,060 [INFO] Скользящие признаки для smart_198_raw созданы.
+2025-01-06 15:45:38,848 [INFO] Скользящие признаки для smart_199_raw созданы.
+2025-01-06 15:45:41,464 [INFO] Скользящие признаки для smart_240_raw созданы.
+2025-01-06 15:45:44,117 [INFO] Скользящие признаки для smart_241_raw созданы.
+2025-01-06 15:45:46,791 [INFO] Скользящие признаки для smart_242_raw созданы.
+2025-01-06 15:45:46,791 [INFO] Создание скользящих признаков с окном 30 дней...
+2025-01-06 15:45:49,478 [INFO] Скользящие признаки для smart_5_raw созданы.
+2025-01-06 15:45:52,099 [INFO] Скользящие признаки для smart_9_raw созданы.
+2025-01-06 15:45:54,693 [INFO] Скользящие признаки для smart_187_raw созданы.
+2025-01-06 15:45:57,281 [INFO] Скользящие признаки для smart_188_raw созданы.
+2025-01-06 15:45:59,876 [INFO] Скользящие признаки для smart_192_raw созданы.
+2025-01-06 15:46:02,478 [INFO] Скользящие признаки для smart_197_raw созданы.
+2025-01-06 15:46:05,111 [INFO] Скользящие признаки для smart_198_raw созданы.
+2025-01-06 15:46:07,803 [INFO] Скользящие признаки для smart_199_raw созданы.
+2025-01-06 15:46:10,655 [INFO] Скользящие признаки для smart_240_raw созданы.
+2025-01-06 15:46:13,310 [INFO] Скользящие признаки для smart_241_raw созданы.
+2025-01-06 15:46:15,996 [INFO] Скользящие признаки для smart_242_raw созданы.
+2025-01-06 15:46:15,996 [INFO] Создание взаимодействующих признаков...
+2025-01-06 15:46:16,009 [INFO] Взаимодействующий признак smart_5_raw_x_smart_9_raw создан.
+2025-01-06 15:46:16,023 [INFO] Взаимодействующий признак smart_187_raw_x_smart_188_raw создан.
+2025-01-06 15:46:16,036 [INFO] Взаимодействующий признак smart_192_raw_x_smart_197_raw создан.
+2025-01-06 15:46:16,049 [INFO] Взаимодействующий признак smart_198_raw_x_smart_199_raw создан.
+2025-01-06 15:46:16,062 [INFO] Взаимодействующий признак smart_240_raw_x_smart_241_raw создан.
+2025-01-06 15:46:16,075 [INFO] Взаимодействующий признак smart_242_raw_x_capacity_bytes создан.
+2025-01-06 15:46:16,600 [INFO] Категориальный признак 'model' закодирован.
+2025-01-06 15:46:16,879 [INFO] Распределение классов после создания целевого признака:
+2025-01-06 15:46:16,899 [INFO] failure_future
+0    7319970
+1        172
+Name: count, dtype: int64
+2025-01-06 15:46:16,899 [INFO] Подготовка признаков завершена. Итоговое количество признаков: 100
+2025-01-06 15:46:16,899 [INFO] Признаки подготовлены.
+2025-01-06 15:46:18,837 [INFO] Количество признаков для модели: 95
+2025-01-06 15:46:31,877 [INFO] Данные разделены на обучающую (5856113 образцов) и тестовую (1464029 образцов) выборки.
+2025-01-06 15:46:31,879 [INFO] Начало обучения ансамбля моделей...
+2025-01-06 15:46:32,358 [INFO] Вычисленные веса классов: {0: 0.5000117828371876, 1: 21217.80072463768}
+2025-01-06 15:50:43,116 [INFO] Данные после ресемплинга: (11711950, 95), (11711950,)
+2025-01-06 15:50:43,144 [INFO] Обучение LGBMClassifier
+2025-01-06 15:50:44,004 [INFO] Фолд 1/5
+2025-01-06 15:50:58,709 [INFO] Параметры модели LGBMClassifier: {'boosting_type': 'gbdt', 'class_weight': None, 'colsample_bytree': 1.0, 'importance_type': 'split', 'learning_rate': 0.05, 'max_depth': -1, 'min_child_samples': 20, 'min_child_weight': 0.001, 'min_split_gain': 0.0, 'n_estimators': 1000, 'n_jobs': None, 'num_leaves': 31, 'objective': 'binary', 'random_state': 42, 'reg_alpha': 0.0, 'reg_lambda': 0.0, 'subsample': 1.0, 'subsample_for_bin': 200000, 'subsample_freq': 0, 'metric': 'auc', 'feature_fraction': 0.9, 'bagging_fraction': 0.8, 'bagging_freq': 5, 'verbose': -1}
+2025-01-06 15:50:58,714 [ERROR] TypeError при обучении модели LGBMClassifier на фолде 1: LGBMClassifier.fit() got an unexpected keyword argument 'verbose'
+2025-01-06 15:50:58,727 [ERROR] Ошибка при обучении модели: LGBMClassifier.fit() got an unexpected keyword argument 'verbose'
+Traceback (most recent call last):
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/train.py", line 43, in main
+    model.fit(X_train, y_train)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 95, in fit
+    oof_preds = self._train_model(model, X_res, y_res, skf)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 66, in _train_model
+    raise te
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 52, in _train_model
+    model.fit(
+TypeError: LGBMClassifier.fit() got an unexpected keyword argument 'verbose'
+2025-01-06 15:55:33,323 [INFO] Загрузка данных...
+2025-01-06 15:55:38,383 [INFO] Данные загружены. Размер: (7320142, 16)
+2025-01-06 15:55:38,383 [INFO] Обработка пропущенных значений...
+2025-01-06 15:55:39,382 [INFO] Пропущенные значения обработаны с помощью KNN Imputer.
+2025-01-06 15:55:39,394 [INFO] Пропущенные значения обработаны.
+2025-01-06 15:55:39,394 [INFO] Начало подготовки признаков...
+2025-01-06 15:55:39,864 [INFO] Создание циклических признаков...
+2025-01-06 15:55:39,963 [INFO] Циклические признаки для month созданы.
+2025-01-06 15:55:40,062 [INFO] Циклические признаки для day_of_week созданы.
+2025-01-06 15:55:40,171 [INFO] Циклические признаки для day_of_month созданы.
+2025-01-06 15:55:40,171 [INFO] Найдено 11 S.M.A.R.T. признаков.
+2025-01-06 15:55:40,172 [INFO] Создание скользящих признаков с окном 7 дней...
+2025-01-06 15:55:42,967 [INFO] Скользящие признаки для smart_5_raw созданы.
+2025-01-06 15:55:45,595 [INFO] Скользящие признаки для smart_9_raw созданы.
+2025-01-06 15:55:48,320 [INFO] Скользящие признаки для smart_187_raw созданы.
+2025-01-06 15:55:51,050 [INFO] Скользящие признаки для smart_188_raw созданы.
+2025-01-06 15:55:53,650 [INFO] Скользящие признаки для smart_192_raw созданы.
+2025-01-06 15:55:56,171 [INFO] Скользящие признаки для smart_197_raw созданы.
+2025-01-06 15:55:58,752 [INFO] Скользящие признаки для smart_198_raw созданы.
+2025-01-06 15:56:01,366 [INFO] Скользящие признаки для smart_199_raw созданы.
+2025-01-06 15:56:03,944 [INFO] Скользящие признаки для smart_240_raw созданы.
+2025-01-06 15:56:06,554 [INFO] Скользящие признаки для smart_241_raw созданы.
+2025-01-06 15:56:09,117 [INFO] Скользящие признаки для smart_242_raw созданы.
+2025-01-06 15:56:09,117 [INFO] Создание скользящих признаков с окном 14 дней...
+2025-01-06 15:56:11,697 [INFO] Скользящие признаки для smart_5_raw созданы.
+2025-01-06 15:56:14,268 [INFO] Скользящие признаки для smart_9_raw созданы.
+2025-01-06 15:56:16,839 [INFO] Скользящие признаки для smart_187_raw созданы.
+2025-01-06 15:56:19,443 [INFO] Скользящие признаки для smart_188_raw созданы.
+2025-01-06 15:56:22,039 [INFO] Скользящие признаки для smart_192_raw созданы.
+2025-01-06 15:56:24,656 [INFO] Скользящие признаки для smart_197_raw созданы.
+2025-01-06 15:56:27,238 [INFO] Скользящие признаки для smart_198_raw созданы.
+2025-01-06 15:56:29,844 [INFO] Скользящие признаки для smart_199_raw созданы.
+2025-01-06 15:56:32,441 [INFO] Скользящие признаки для smart_240_raw созданы.
+2025-01-06 15:56:35,019 [INFO] Скользящие признаки для smart_241_raw созданы.
+2025-01-06 15:56:37,624 [INFO] Скользящие признаки для smart_242_raw созданы.
+2025-01-06 15:56:37,624 [INFO] Создание скользящих признаков с окном 30 дней...
+2025-01-06 15:56:40,220 [INFO] Скользящие признаки для smart_5_raw созданы.
+2025-01-06 15:56:42,769 [INFO] Скользящие признаки для smart_9_raw созданы.
+2025-01-06 15:56:45,365 [INFO] Скользящие признаки для smart_187_raw созданы.
+2025-01-06 15:56:47,968 [INFO] Скользящие признаки для smart_188_raw созданы.
+2025-01-06 15:56:50,594 [INFO] Скользящие признаки для smart_192_raw созданы.
+2025-01-06 15:56:53,195 [INFO] Скользящие признаки для smart_197_raw созданы.
+2025-01-06 15:56:55,862 [INFO] Скользящие признаки для smart_198_raw созданы.
+2025-01-06 15:56:58,478 [INFO] Скользящие признаки для smart_199_raw созданы.
+2025-01-06 15:57:01,067 [INFO] Скользящие признаки для smart_240_raw созданы.
+2025-01-06 15:57:03,802 [INFO] Скользящие признаки для smart_241_raw созданы.
+2025-01-06 15:57:06,454 [INFO] Скользящие признаки для smart_242_raw созданы.
+2025-01-06 15:57:06,454 [INFO] Создание взаимодействующих признаков...
+2025-01-06 15:57:06,469 [INFO] Взаимодействующий признак smart_5_raw_x_smart_9_raw создан.
+2025-01-06 15:57:06,482 [INFO] Взаимодействующий признак smart_187_raw_x_smart_188_raw создан.
+2025-01-06 15:57:06,495 [INFO] Взаимодействующий признак smart_192_raw_x_smart_197_raw создан.
+2025-01-06 15:57:06,509 [INFO] Взаимодействующий признак smart_198_raw_x_smart_199_raw создан.
+2025-01-06 15:57:06,523 [INFO] Взаимодействующий признак smart_240_raw_x_smart_241_raw создан.
+2025-01-06 15:57:06,539 [INFO] Взаимодействующий признак smart_242_raw_x_capacity_bytes создан.
+2025-01-06 15:57:07,046 [INFO] Категориальный признак 'model' закодирован.
+2025-01-06 15:57:07,324 [INFO] Распределение классов после создания целевого признака:
+2025-01-06 15:57:07,342 [INFO] failure_future
+0    7319970
+1        172
+Name: count, dtype: int64
+2025-01-06 15:57:07,343 [INFO] Подготовка признаков завершена. Итоговое количество признаков: 100
+2025-01-06 15:57:07,343 [INFO] Признаки подготовлены.
+2025-01-06 15:57:09,231 [INFO] Количество признаков для модели: 95
+2025-01-06 15:57:22,500 [INFO] Данные разделены на обучающую (5856113 образцов) и тестовую (1464029 образцов) выборки.
+2025-01-06 15:57:22,501 [INFO] Начало обучения ансамбля моделей...
+2025-01-06 15:57:22,993 [INFO] Вычисленные веса классов: {0: 0.5000117828371876, 1: 21217.80072463768}
+2025-01-06 16:01:54,621 [INFO] Данные после ресемплинга: (11711950, 95), (11711950,)
+2025-01-06 16:01:54,644 [INFO] Обучение LGBMClassifier
+2025-01-06 16:01:55,484 [INFO] Фолд 1/5
+2025-01-06 16:02:15,952 [INFO] Параметры модели LGBMClassifier: {'boosting_type': 'gbdt', 'class_weight': None, 'colsample_bytree': 1.0, 'importance_type': 'split', 'learning_rate': 0.05, 'max_depth': -1, 'min_child_samples': 20, 'min_child_weight': 0.001, 'min_split_gain': 0.0, 'n_estimators': 1000, 'n_jobs': None, 'num_leaves': 31, 'objective': 'binary', 'random_state': 42, 'reg_alpha': 0.0, 'reg_lambda': 0.0, 'subsample': 1.0, 'subsample_for_bin': 200000, 'subsample_freq': 0, 'metric': 'auc', 'feature_fraction': 0.9, 'bagging_fraction': 0.8, 'bagging_freq': 5, 'verbose': -1}
+2025-01-06 16:04:41,412 [INFO] ROC AUC для фолда 1: 1.0000
+2025-01-06 16:04:41,626 [INFO] Фолд 2/5
+2025-01-06 16:05:06,485 [INFO] Параметры модели LGBMClassifier: {'boosting_type': 'gbdt', 'class_weight': None, 'colsample_bytree': 1.0, 'importance_type': 'split', 'learning_rate': 0.05, 'max_depth': -1, 'min_child_samples': 20, 'min_child_weight': 0.001, 'min_split_gain': 0.0, 'n_estimators': 1000, 'n_jobs': None, 'num_leaves': 31, 'objective': 'binary', 'random_state': 42, 'reg_alpha': 0.0, 'reg_lambda': 0.0, 'subsample': 1.0, 'subsample_for_bin': 200000, 'subsample_freq': 0, 'metric': 'auc', 'feature_fraction': 0.9, 'bagging_fraction': 0.8, 'bagging_freq': 5, 'verbose': -1}
+2025-01-06 16:07:37,607 [INFO] ROC AUC для фолда 2: 1.0000
+2025-01-06 16:07:37,810 [INFO] Фолд 3/5
+2025-01-06 16:08:01,337 [INFO] Параметры модели LGBMClassifier: {'boosting_type': 'gbdt', 'class_weight': None, 'colsample_bytree': 1.0, 'importance_type': 'split', 'learning_rate': 0.05, 'max_depth': -1, 'min_child_samples': 20, 'min_child_weight': 0.001, 'min_split_gain': 0.0, 'n_estimators': 1000, 'n_jobs': None, 'num_leaves': 31, 'objective': 'binary', 'random_state': 42, 'reg_alpha': 0.0, 'reg_lambda': 0.0, 'subsample': 1.0, 'subsample_for_bin': 200000, 'subsample_freq': 0, 'metric': 'auc', 'feature_fraction': 0.9, 'bagging_fraction': 0.8, 'bagging_freq': 5, 'verbose': -1}
+2025-01-06 16:10:48,843 [INFO] ROC AUC для фолда 3: 1.0000
+2025-01-06 16:10:49,058 [INFO] Фолд 4/5
+2025-01-06 16:11:13,719 [INFO] Параметры модели LGBMClassifier: {'boosting_type': 'gbdt', 'class_weight': None, 'colsample_bytree': 1.0, 'importance_type': 'split', 'learning_rate': 0.05, 'max_depth': -1, 'min_child_samples': 20, 'min_child_weight': 0.001, 'min_split_gain': 0.0, 'n_estimators': 1000, 'n_jobs': None, 'num_leaves': 31, 'objective': 'binary', 'random_state': 42, 'reg_alpha': 0.0, 'reg_lambda': 0.0, 'subsample': 1.0, 'subsample_for_bin': 200000, 'subsample_freq': 0, 'metric': 'auc', 'feature_fraction': 0.9, 'bagging_fraction': 0.8, 'bagging_freq': 5, 'verbose': -1}
+2025-01-06 16:13:59,816 [INFO] ROC AUC для фолда 4: 1.0000
+2025-01-06 16:14:00,032 [INFO] Фолд 5/5
+2025-01-06 16:14:25,968 [INFO] Параметры модели LGBMClassifier: {'boosting_type': 'gbdt', 'class_weight': None, 'colsample_bytree': 1.0, 'importance_type': 'split', 'learning_rate': 0.05, 'max_depth': -1, 'min_child_samples': 20, 'min_child_weight': 0.001, 'min_split_gain': 0.0, 'n_estimators': 1000, 'n_jobs': None, 'num_leaves': 31, 'objective': 'binary', 'random_state': 42, 'reg_alpha': 0.0, 'reg_lambda': 0.0, 'subsample': 1.0, 'subsample_for_bin': 200000, 'subsample_freq': 0, 'metric': 'auc', 'feature_fraction': 0.9, 'bagging_fraction': 0.8, 'bagging_freq': 5, 'verbose': -1}
+2025-01-06 16:17:02,644 [INFO] ROC AUC для фолда 5: 1.0000
+2025-01-06 16:17:02,842 [INFO] LGBMClassifier обучен и добавлен в ансамбль.
+2025-01-06 16:17:02,843 [INFO] Обучение CatBoostClassifier
+2025-01-06 16:17:03,695 [INFO] Фолд 1/5
+2025-01-06 16:17:26,635 [INFO] Параметры модели CatBoostClassifier: {'iterations': 1000, 'learning_rate': 0.1, 'depth': 6, 'l2_leaf_reg': 5, 'loss_function': 'Logloss', 'random_seed': 42, 'use_best_model': True, 'eval_metric': 'AUC', 'bootstrap_type': 'Bernoulli', 'subsample': 0.8}
+2025-01-06 16:20:48,209 [INFO] ROC AUC для фолда 1: 1.0000
+2025-01-06 16:20:48,535 [INFO] Фолд 2/5
+2025-01-06 16:21:15,159 [INFO] Параметры модели CatBoostClassifier: {'iterations': 1000, 'learning_rate': 0.1, 'depth': 6, 'l2_leaf_reg': 5, 'loss_function': 'Logloss', 'random_seed': 42, 'use_best_model': True, 'eval_metric': 'AUC', 'bootstrap_type': 'Bernoulli', 'subsample': 0.8}
+2025-01-06 16:26:26,854 [INFO] ROC AUC для фолда 2: 1.0000
+2025-01-06 16:26:27,191 [INFO] Фолд 3/5
+2025-01-06 16:26:51,836 [INFO] Параметры модели CatBoostClassifier: {'iterations': 1000, 'learning_rate': 0.1, 'depth': 6, 'l2_leaf_reg': 5, 'loss_function': 'Logloss', 'random_seed': 42, 'use_best_model': True, 'eval_metric': 'AUC', 'bootstrap_type': 'Bernoulli', 'subsample': 0.8}
+2025-01-06 16:30:02,250 [INFO] ROC AUC для фолда 3: 1.0000
+2025-01-06 16:30:02,573 [INFO] Фолд 4/5
+2025-01-06 16:30:28,323 [INFO] Параметры модели CatBoostClassifier: {'iterations': 1000, 'learning_rate': 0.1, 'depth': 6, 'l2_leaf_reg': 5, 'loss_function': 'Logloss', 'random_seed': 42, 'use_best_model': True, 'eval_metric': 'AUC', 'bootstrap_type': 'Bernoulli', 'subsample': 0.8}
+2025-01-06 16:35:09,934 [INFO] ROC AUC для фолда 4: 1.0000
+2025-01-06 16:35:10,308 [INFO] Фолд 5/5
+2025-01-06 16:35:34,615 [INFO] Параметры модели CatBoostClassifier: {'iterations': 1000, 'learning_rate': 0.1, 'depth': 6, 'l2_leaf_reg': 5, 'loss_function': 'Logloss', 'random_seed': 42, 'use_best_model': True, 'eval_metric': 'AUC', 'bootstrap_type': 'Bernoulli', 'subsample': 0.8}
+2025-01-06 16:39:40,935 [INFO] ROC AUC для фолда 5: 1.0000
+2025-01-06 16:39:41,396 [INFO] CatBoostClassifier обучен и добавлен в ансамбль.
+2025-01-06 16:39:41,398 [INFO] Обучение RandomForestClassifier
+2025-01-06 16:39:42,214 [INFO] Фолд 1/5
+2025-01-06 16:39:59,242 [INFO] Параметры модели RandomForestClassifier: {'bootstrap': True, 'ccp_alpha': 0.0, 'class_weight': None, 'criterion': 'gini', 'max_depth': 10, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'max_samples': None, 'min_impurity_decrease': 0.0, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 100, 'n_jobs': None, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+2025-01-06 16:39:59,279 [ERROR] TypeError при обучении модели RandomForestClassifier на фолде 1: BaseForest.fit() got an unexpected keyword argument 'eval_set'
+2025-01-06 16:39:59,292 [ERROR] Ошибка при обучении модели: BaseForest.fit() got an unexpected keyword argument 'eval_set'
+Traceback (most recent call last):
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/train.py", line 43, in main
+    model.fit(X_train, y_train)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 104, in fit
+    oof_preds = self._train_model(model, X_res, y_res, skf)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 75, in _train_model
+    raise te
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 61, in _train_model
+    model.fit(
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/sklearn/base.py", line 1152, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseForest.fit() got an unexpected keyword argument 'eval_set'
+2025-01-06 16:54:29,686 [INFO] Загрузка данных...
+2025-01-06 16:54:34,990 [INFO] Данные загружены. Размер: (7320142, 16)
+2025-01-06 16:54:34,990 [INFO] Обработка пропущенных значений...
+2025-01-06 16:54:36,184 [INFO] Пропущенные значения обработаны с помощью KNN Imputer.
+2025-01-06 16:54:36,195 [INFO] Пропущенные значения обработаны.
+2025-01-06 16:54:36,195 [INFO] Начало подготовки признаков...
+2025-01-06 16:54:36,670 [INFO] Создание циклических признаков...
+2025-01-06 16:54:36,765 [INFO] Циклические признаки для month созданы.
+2025-01-06 16:54:36,858 [INFO] Циклические признаки для day_of_week созданы.
+2025-01-06 16:54:36,952 [INFO] Циклические признаки для day_of_month созданы.
+2025-01-06 16:54:36,952 [INFO] Найдено 11 S.M.A.R.T. признаков.
+2025-01-06 16:54:36,953 [INFO] Создание скользящих признаков с окном 7 дней...
+2025-01-06 16:54:39,764 [INFO] Скользящие признаки для smart_5_raw созданы.
+2025-01-06 16:54:42,392 [INFO] Скользящие признаки для smart_9_raw созданы.
+2025-01-06 16:54:45,231 [INFO] Скользящие признаки для smart_187_raw созданы.
+2025-01-06 16:54:48,057 [INFO] Скользящие признаки для smart_188_raw созданы.
+2025-01-06 16:54:50,651 [INFO] Скользящие признаки для smart_192_raw созданы.
+2025-01-06 16:54:53,506 [INFO] Скользящие признаки для smart_197_raw созданы.
+2025-01-06 16:54:56,167 [INFO] Скользящие признаки для smart_198_raw созданы.
+2025-01-06 16:54:58,764 [INFO] Скользящие признаки для smart_199_raw созданы.
+2025-01-06 16:55:01,405 [INFO] Скользящие признаки для smart_240_raw созданы.
+2025-01-06 16:55:04,098 [INFO] Скользящие признаки для smart_241_raw созданы.
+2025-01-06 16:55:06,776 [INFO] Скользящие признаки для smart_242_raw созданы.
+2025-01-06 16:55:06,776 [INFO] Создание скользящих признаков с окном 14 дней...
+2025-01-06 16:55:09,610 [INFO] Скользящие признаки для smart_5_raw созданы.
+2025-01-06 16:55:12,380 [INFO] Скользящие признаки для smart_9_raw созданы.
+2025-01-06 16:55:14,988 [INFO] Скользящие признаки для smart_187_raw созданы.
+2025-01-06 16:55:17,639 [INFO] Скользящие признаки для smart_188_raw созданы.
+2025-01-06 16:55:20,266 [INFO] Скользящие признаки для smart_192_raw созданы.
+2025-01-06 16:55:22,935 [INFO] Скользящие признаки для smart_197_raw созданы.
+2025-01-06 16:55:25,528 [INFO] Скользящие признаки для smart_198_raw созданы.
+2025-01-06 16:55:28,169 [INFO] Скользящие признаки для smart_199_raw созданы.
+2025-01-06 16:55:30,787 [INFO] Скользящие признаки для smart_240_raw созданы.
+2025-01-06 16:55:33,408 [INFO] Скользящие признаки для smart_241_raw созданы.
+2025-01-06 16:55:36,033 [INFO] Скользящие признаки для smart_242_raw созданы.
+2025-01-06 16:55:36,033 [INFO] Создание скользящих признаков с окном 30 дней...
+2025-01-06 16:55:38,707 [INFO] Скользящие признаки для smart_5_raw созданы.
+2025-01-06 16:55:41,408 [INFO] Скользящие признаки для smart_9_raw созданы.
+2025-01-06 16:55:44,116 [INFO] Скользящие признаки для smart_187_raw созданы.
+2025-01-06 16:55:46,728 [INFO] Скользящие признаки для smart_188_raw созданы.
+2025-01-06 16:55:49,336 [INFO] Скользящие признаки для smart_192_raw созданы.
+2025-01-06 16:55:52,009 [INFO] Скользящие признаки для smart_197_raw созданы.
+2025-01-06 16:55:54,649 [INFO] Скользящие признаки для smart_198_raw созданы.
+2025-01-06 16:55:57,297 [INFO] Скользящие признаки для smart_199_raw созданы.
+2025-01-06 16:55:59,867 [INFO] Скользящие признаки для smart_240_raw созданы.
+2025-01-06 16:56:02,466 [INFO] Скользящие признаки для smart_241_raw созданы.
+2025-01-06 16:56:05,059 [INFO] Скользящие признаки для smart_242_raw созданы.
+2025-01-06 16:56:05,059 [INFO] Создание взаимодействующих признаков...
+2025-01-06 16:56:05,072 [INFO] Взаимодействующий признак smart_5_raw_x_smart_9_raw создан.
+2025-01-06 16:56:05,087 [INFO] Взаимодействующий признак smart_187_raw_x_smart_188_raw создан.
+2025-01-06 16:56:05,101 [INFO] Взаимодействующий признак smart_192_raw_x_smart_197_raw создан.
+2025-01-06 16:56:05,115 [INFO] Взаимодействующий признак smart_198_raw_x_smart_199_raw создан.
+2025-01-06 16:56:05,129 [INFO] Взаимодействующий признак smart_240_raw_x_smart_241_raw создан.
+2025-01-06 16:56:05,151 [INFO] Взаимодействующий признак smart_242_raw_x_capacity_bytes создан.
+2025-01-06 16:56:05,680 [INFO] Категориальный признак 'model' закодирован.
+2025-01-06 16:56:05,963 [INFO] Распределение классов после создания целевого признака:
+2025-01-06 16:56:05,983 [INFO] failure_future
+0    7319970
+1        172
+Name: count, dtype: int64
+2025-01-06 16:56:05,983 [INFO] Подготовка признаков завершена. Итоговое количество признаков: 100
+2025-01-06 16:56:05,983 [INFO] Признаки подготовлены.
+2025-01-06 16:56:08,894 [INFO] Количество признаков для модели: 95
+2025-01-06 16:56:21,424 [INFO] Данные разделены на обучающую (5856113 образцов) и тестовую (1464029 образцов) выборки.
+2025-01-06 16:56:21,425 [INFO] Начало обучения ансамбля моделей...
+2025-01-06 16:56:21,905 [INFO] Вычисленные веса классов: {0: 0.5000117828371876, 1: 21217.80072463768}
+2025-01-06 16:59:18,835 [INFO] Данные после ресемплинга: (11711950, 95), (11711950,)
+2025-01-06 16:59:18,850 [INFO] Обучение LGBMClassifier
+2025-01-06 16:59:19,704 [INFO] Фолд 1/5
+2025-01-06 16:59:34,549 [INFO] Параметры модели LGBMClassifier: {'boosting_type': 'gbdt', 'class_weight': None, 'colsample_bytree': 1.0, 'importance_type': 'split', 'learning_rate': 0.05, 'max_depth': -1, 'min_child_samples': 20, 'min_child_weight': 0.001, 'min_split_gain': 0.0, 'n_estimators': 1000, 'n_jobs': None, 'num_leaves': 31, 'objective': 'binary', 'random_state': 42, 'reg_alpha': 0.0, 'reg_lambda': 0.0, 'subsample': 1.0, 'subsample_for_bin': 200000, 'subsample_freq': 0, 'metric': 'auc', 'feature_fraction': 0.9, 'bagging_fraction': 0.8, 'bagging_freq': 5, 'verbose': -1}
+2025-01-06 16:59:34,561 [ERROR] TypeError при обучении модели LGBMClassifier на фолде 1: LGBMClassifier.fit() got an unexpected keyword argument 'verbose'
+2025-01-06 16:59:34,574 [ERROR] Ошибка при обучении модели: LGBMClassifier.fit() got an unexpected keyword argument 'verbose'
+Traceback (most recent call last):
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/train.py", line 43, in main
+    model.fit(X_train, y_train)
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 92, in fit
+    oof_preds = self._train_model(model, X_res, y_res, skf)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 65, in _train_model
+    raise te
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/src/model.py", line 50, in _train_model
+    model.fit(
+TypeError: LGBMClassifier.fit() got an unexpected keyword argument 'verbose'
+2025-01-06 17:01:59,042 [INFO] Загрузка данных...
+2025-01-06 17:02:03,938 [INFO] Данные загружены. Размер: (7320142, 16)
+2025-01-06 17:02:03,938 [INFO] Обработка пропущенных значений...
+2025-01-06 17:02:04,753 [INFO] Пропущенные значения обработаны с помощью KNN Imputer.
+2025-01-06 17:02:04,761 [INFO] Пропущенные значения обработаны.
+2025-01-06 17:02:04,761 [INFO] Начало подготовки признаков...
+2025-01-06 17:02:05,216 [INFO] Создание циклических признаков...
+2025-01-06 17:02:05,311 [INFO] Циклические признаки для month созданы.
+2025-01-06 17:02:05,402 [INFO] Циклические признаки для day_of_week созданы.
+2025-01-06 17:02:05,499 [INFO] Циклические признаки для day_of_month созданы.
+2025-01-06 17:02:05,499 [INFO] Найдено 11 S.M.A.R.T. признаков.
+2025-01-06 17:02:05,499 [INFO] Создание скользящих признаков с окном 7 дней...
+2025-01-06 17:02:08,046 [INFO] Скользящие признаки для smart_5_raw созданы.
+2025-01-06 17:02:10,575 [INFO] Скользящие признаки для smart_9_raw созданы.
+2025-01-06 17:02:13,083 [INFO] Скользящие признаки для smart_187_raw созданы.
+2025-01-06 17:02:15,594 [INFO] Скользящие признаки для smart_188_raw созданы.
+2025-01-06 17:02:18,223 [INFO] Скользящие признаки для smart_192_raw созданы.
+2025-01-06 17:02:20,814 [INFO] Скользящие признаки для smart_197_raw созданы.
+2025-01-06 17:02:23,370 [INFO] Скользящие признаки для smart_198_raw созданы.
+2025-01-06 17:02:25,900 [INFO] Скользящие признаки для smart_199_raw созданы.
+2025-01-06 17:02:28,557 [INFO] Скользящие признаки для smart_240_raw созданы.
+2025-01-06 17:02:31,251 [INFO] Скользящие признаки для smart_241_raw созданы.
+2025-01-06 17:02:33,899 [INFO] Скользящие признаки для smart_242_raw созданы.
+2025-01-06 17:02:33,900 [INFO] Создание скользящих признаков с окном 14 дней...
+2025-01-06 17:02:36,498 [INFO] Скользящие признаки для smart_5_raw созданы.
+2025-01-06 17:02:39,113 [INFO] Скользящие признаки для smart_9_raw созданы.
+2025-01-06 17:02:41,754 [INFO] Скользящие признаки для smart_187_raw созданы.
+2025-01-06 17:02:44,334 [INFO] Скользящие признаки для smart_188_raw созданы.
+2025-01-06 17:02:47,042 [INFO] Скользящие признаки для smart_192_raw созданы.
+2025-01-06 17:02:49,704 [INFO] Скользящие признаки для smart_197_raw созданы.
+2025-01-06 17:02:52,320 [INFO] Скользящие признаки для smart_198_raw созданы.
+2025-01-06 17:02:54,913 [INFO] Скользящие признаки для smart_199_raw созданы.
+2025-01-06 17:02:57,576 [INFO] Скользящие признаки для smart_240_raw созданы.
+2025-01-06 17:03:00,206 [INFO] Скользящие признаки для smart_241_raw созданы.
+2025-01-06 17:03:02,899 [INFO] Скользящие признаки для smart_242_raw созданы.
+2025-01-06 17:03:02,899 [INFO] Создание скользящих признаков с окном 30 дней...
+2025-01-06 17:03:05,510 [INFO] Скользящие признаки для smart_5_raw созданы.
+2025-01-06 17:03:08,220 [INFO] Скользящие признаки для smart_9_raw созданы.
+2025-01-06 17:03:11,023 [INFO] Скользящие признаки для smart_187_raw созданы.
+2025-01-06 17:03:13,957 [INFO] Скользящие признаки для smart_188_raw созданы.
+2025-01-06 17:03:16,794 [INFO] Скользящие признаки для smart_192_raw созданы.
+2025-01-06 17:03:19,456 [INFO] Скользящие признаки для smart_197_raw созданы.
+2025-01-06 17:03:22,129 [INFO] Скользящие признаки для smart_198_raw созданы.
+2025-01-06 17:03:24,841 [INFO] Скользящие признаки для smart_199_raw созданы.
+2025-01-06 17:03:27,509 [INFO] Скользящие признаки для smart_240_raw созданы.
+2025-01-06 17:03:30,251 [INFO] Скользящие признаки для smart_241_raw созданы.
+2025-01-06 17:03:33,380 [INFO] Скользящие признаки для smart_242_raw созданы.
+2025-01-06 17:03:33,380 [INFO] Создание взаимодействующих признаков...
+2025-01-06 17:03:33,413 [INFO] Взаимодействующий признак smart_5_raw_x_smart_9_raw создан.
+2025-01-06 17:03:33,434 [INFO] Взаимодействующий признак smart_187_raw_x_smart_188_raw создан.
+2025-01-06 17:03:33,449 [INFO] Взаимодействующий признак smart_192_raw_x_smart_197_raw создан.
+2025-01-06 17:03:33,468 [INFO] Взаимодействующий признак smart_198_raw_x_smart_199_raw создан.
+2025-01-06 17:03:33,484 [INFO] Взаимодействующий признак smart_240_raw_x_smart_241_raw создан.
+2025-01-06 17:03:33,499 [INFO] Взаимодействующий признак smart_242_raw_x_capacity_bytes создан.
+2025-01-06 17:03:34,060 [INFO] Категориальный признак 'model' закодирован.
+2025-01-06 17:03:34,342 [INFO] Распределение классов после создания целевого признака:
+2025-01-06 17:03:34,361 [INFO] failure_future
+0    7319970
+1        172
+Name: count, dtype: int64
+2025-01-06 17:03:34,361 [INFO] Подготовка признаков завершена. Итоговое количество признаков: 100
+2025-01-06 17:03:34,361 [INFO] Признаки подготовлены.
+2025-01-06 17:03:36,276 [INFO] Количество признаков для модели: 95
+2025-01-06 17:03:49,636 [INFO] Данные разделены на обучающую (5856113 образцов) и тестовую (1464029 образцов) выборки.
+2025-01-06 17:03:49,637 [INFO] Начало обучения ансамбля моделей...
+2025-01-06 17:03:50,146 [INFO] Вычисленные веса классов: {0: 0.5000117828371876, 1: 21217.80072463768}
+2025-01-06 17:06:57,162 [INFO] Данные после ресемплинга: (11711950, 95), (11711950,)
+2025-01-06 17:06:57,177 [INFO] Обучение LGBMClassifier
+2025-01-06 17:06:58,030 [INFO] Фолд 1/5
+2025-01-06 17:07:13,533 [INFO] Параметры модели LGBMClassifier: {'boosting_type': 'gbdt', 'class_weight': None, 'colsample_bytree': 1.0, 'importance_type': 'split', 'learning_rate': 0.05, 'max_depth': -1, 'min_child_samples': 20, 'min_child_weight': 0.001, 'min_split_gain': 0.0, 'n_estimators': 1000, 'n_jobs': None, 'num_leaves': 31, 'objective': 'binary', 'random_state': 42, 'reg_alpha': 0.0, 'reg_lambda': 0.0, 'subsample': 1.0, 'subsample_for_bin': 200000, 'subsample_freq': 0, 'metric': 'auc', 'feature_fraction': 0.9, 'bagging_fraction': 0.8, 'bagging_freq': 5, 'verbose': -1}
+2025-01-06 17:09:31,362 [INFO] ROC AUC для фолда 1: 1.0000
+2025-01-06 17:09:31,585 [INFO] Фолд 2/5
+2025-01-06 17:09:55,929 [INFO] Параметры модели LGBMClassifier: {'boosting_type': 'gbdt', 'class_weight': None, 'colsample_bytree': 1.0, 'importance_type': 'split', 'learning_rate': 0.05, 'max_depth': -1, 'min_child_samples': 20, 'min_child_weight': 0.001, 'min_split_gain': 0.0, 'n_estimators': 1000, 'n_jobs': None, 'num_leaves': 31, 'objective': 'binary', 'random_state': 42, 'reg_alpha': 0.0, 'reg_lambda': 0.0, 'subsample': 1.0, 'subsample_for_bin': 200000, 'subsample_freq': 0, 'metric': 'auc', 'feature_fraction': 0.9, 'bagging_fraction': 0.8, 'bagging_freq': 5, 'verbose': -1}
+2025-01-06 17:12:21,525 [INFO] ROC AUC для фолда 2: 1.0000
+2025-01-06 17:12:21,739 [INFO] Фолд 3/5
+2025-01-06 17:12:50,012 [INFO] Параметры модели LGBMClassifier: {'boosting_type': 'gbdt', 'class_weight': None, 'colsample_bytree': 1.0, 'importance_type': 'split', 'learning_rate': 0.05, 'max_depth': -1, 'min_child_samples': 20, 'min_child_weight': 0.001, 'min_split_gain': 0.0, 'n_estimators': 1000, 'n_jobs': None, 'num_leaves': 31, 'objective': 'binary', 'random_state': 42, 'reg_alpha': 0.0, 'reg_lambda': 0.0, 'subsample': 1.0, 'subsample_for_bin': 200000, 'subsample_freq': 0, 'metric': 'auc', 'feature_fraction': 0.9, 'bagging_fraction': 0.8, 'bagging_freq': 5, 'verbose': -1}
+2025-01-06 17:15:51,236 [INFO] ROC AUC для фолда 3: 1.0000
+2025-01-06 17:15:51,447 [INFO] Фолд 4/5
+2025-01-06 17:16:15,676 [INFO] Параметры модели LGBMClassifier: {'boosting_type': 'gbdt', 'class_weight': None, 'colsample_bytree': 1.0, 'importance_type': 'split', 'learning_rate': 0.05, 'max_depth': -1, 'min_child_samples': 20, 'min_child_weight': 0.001, 'min_split_gain': 0.0, 'n_estimators': 1000, 'n_jobs': None, 'num_leaves': 31, 'objective': 'binary', 'random_state': 42, 'reg_alpha': 0.0, 'reg_lambda': 0.0, 'subsample': 1.0, 'subsample_for_bin': 200000, 'subsample_freq': 0, 'metric': 'auc', 'feature_fraction': 0.9, 'bagging_fraction': 0.8, 'bagging_freq': 5, 'verbose': -1}
+2025-01-06 17:18:51,663 [INFO] ROC AUC для фолда 4: 1.0000
+2025-01-06 17:18:51,929 [INFO] Фолд 5/5
+2025-01-06 17:19:14,366 [INFO] Параметры модели LGBMClassifier: {'boosting_type': 'gbdt', 'class_weight': None, 'colsample_bytree': 1.0, 'importance_type': 'split', 'learning_rate': 0.05, 'max_depth': -1, 'min_child_samples': 20, 'min_child_weight': 0.001, 'min_split_gain': 0.0, 'n_estimators': 1000, 'n_jobs': None, 'num_leaves': 31, 'objective': 'binary', 'random_state': 42, 'reg_alpha': 0.0, 'reg_lambda': 0.0, 'subsample': 1.0, 'subsample_for_bin': 200000, 'subsample_freq': 0, 'metric': 'auc', 'feature_fraction': 0.9, 'bagging_fraction': 0.8, 'bagging_freq': 5, 'verbose': -1}
+2025-01-06 17:21:42,337 [INFO] ROC AUC для фолда 5: 1.0000
+2025-01-06 17:21:42,521 [INFO] LGBMClassifier обучен и добавлен в ансамбль.
+2025-01-06 17:21:42,522 [INFO] Обучение CatBoostClassifier
+2025-01-06 17:21:43,463 [INFO] Фолд 1/5
+2025-01-06 17:22:06,044 [INFO] Параметры модели CatBoostClassifier: {'iterations': 1000, 'learning_rate': 0.1, 'depth': 6, 'l2_leaf_reg': 5, 'loss_function': 'Logloss', 'random_seed': 42, 'use_best_model': True, 'verbose': False, 'eval_metric': 'AUC', 'bootstrap_type': 'Bernoulli', 'subsample': 0.8}
+2025-01-06 17:25:13,855 [INFO] ROC AUC для фолда 1: 1.0000
+2025-01-06 17:25:14,135 [INFO] Фолд 2/5
+2025-01-06 17:25:43,244 [INFO] Параметры модели CatBoostClassifier: {'iterations': 1000, 'learning_rate': 0.1, 'depth': 6, 'l2_leaf_reg': 5, 'loss_function': 'Logloss', 'random_seed': 42, 'use_best_model': True, 'verbose': False, 'eval_metric': 'AUC', 'bootstrap_type': 'Bernoulli', 'subsample': 0.8}
+2025-01-06 17:30:25,061 [INFO] ROC AUC для фолда 2: 1.0000
+2025-01-06 17:30:25,587 [INFO] Фолд 3/5
+2025-01-06 17:30:57,462 [INFO] Параметры модели CatBoostClassifier: {'iterations': 1000, 'learning_rate': 0.1, 'depth': 6, 'l2_leaf_reg': 5, 'loss_function': 'Logloss', 'random_seed': 42, 'use_best_model': True, 'verbose': False, 'eval_metric': 'AUC', 'bootstrap_type': 'Bernoulli', 'subsample': 0.8}
+2025-01-06 17:33:46,293 [INFO] ROC AUC для фолда 3: 1.0000
+2025-01-06 17:33:46,581 [INFO] Фолд 4/5
+2025-01-06 17:34:10,563 [INFO] Параметры модели CatBoostClassifier: {'iterations': 1000, 'learning_rate': 0.1, 'depth': 6, 'l2_leaf_reg': 5, 'loss_function': 'Logloss', 'random_seed': 42, 'use_best_model': True, 'verbose': False, 'eval_metric': 'AUC', 'bootstrap_type': 'Bernoulli', 'subsample': 0.8}
+2025-01-06 17:38:51,985 [INFO] ROC AUC для фолда 4: 1.0000
+2025-01-06 17:38:52,256 [INFO] Фолд 5/5
+2025-01-06 17:39:15,552 [INFO] Параметры модели CatBoostClassifier: {'iterations': 1000, 'learning_rate': 0.1, 'depth': 6, 'l2_leaf_reg': 5, 'loss_function': 'Logloss', 'random_seed': 42, 'use_best_model': True, 'verbose': False, 'eval_metric': 'AUC', 'bootstrap_type': 'Bernoulli', 'subsample': 0.8}
+2025-01-06 17:43:25,799 [INFO] ROC AUC для фолда 5: 1.0000
+2025-01-06 17:43:26,218 [INFO] CatBoostClassifier обучен и добавлен в ансамбль.
+2025-01-06 17:43:26,218 [INFO] Обучение всех моделей завершено.
+2025-01-06 17:43:26,218 [INFO] Оптимизация весов моделей
+2025-01-06 18:23:17,735 [INFO] Лучшие веса: [0.35578821 0.64421179] с ROC AUC: 0.9999996096586667
+2025-01-06 18:23:17,738 [INFO] Оптимизированные веса моделей: [0.35578821 0.64421179]
+2025-01-06 18:23:18,057 [INFO] Модель обучена.
+2025-01-06 18:23:26,254 [INFO] Предсказания сделаны на тестовой выборке.
+2025-01-06 18:23:26,256 [INFO] 
+Результаты тестирования:
+2025-01-06 18:23:26,256 [INFO] --------------------------------------------------
+2025-01-06 18:23:26,370 [INFO] 
+Матрица ошибок:
+2025-01-06 18:23:26,370 [INFO] TN: 1463790, FP: 205
+2025-01-06 18:23:26,370 [INFO] FN: 34, TP: 0
+2025-01-06 18:23:27,419 [INFO] 
+Подробный отчет:
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00   1463995
+           1       0.00      0.00      0.00        34
+
+    accuracy                           1.00   1464029
+   macro avg       0.50      0.50      0.50   1464029
+weighted avg       1.00      1.00      1.00   1464029
+
+2025-01-06 18:23:27,807 [INFO] ROC AUC: 0.7940
+2025-01-06 18:23:28,142 [INFO] Average Precision Score: 0.0021
+2025-01-06 18:23:28,142 [INFO] --------------------------------------------------
+2025-01-06 18:23:30,602 [INFO] Метрики и графики сохранены.
+2025-01-06 20:08:48,593 INFO:После балансировки: failure
+0    5855975
+1    5855975
+Name: count, dtype: int64
+2025-01-06 20:08:48,594 INFO:Начало обучения LightGBM
+2025-01-06 20:09:41,056 INFO:После балансировки: failure
+0    5855975
+1    5855975
+Name: count, dtype: int64
+2025-01-06 20:09:41,056 INFO:Начало обучения LightGBM
+2025-01-06 20:09:52,900 INFO:LightGBM модель сохранена.
+2025-01-06 20:09:52,902 INFO:Начало обучения CatBoost
+2025-01-06 20:10:51,721 INFO:CatBoost модель сохранена.
+2025-01-06 20:14:25,050 INFO:Начало обучения LightGBM
+2025-01-06 20:14:25,217 INFO:LightGBM модель сохранена.
+2025-01-06 20:14:25,217 INFO:Начало обучения CatBoost
+2025-01-06 20:14:25,344 INFO:CatBoost модель сохранена.
+2025-01-06 20:14:25,346 INFO:Начало обучения LightGBM
+2025-01-06 20:14:25,467 INFO:LightGBM модель сохранена.
+2025-01-06 20:14:25,467 INFO:Начало обучения CatBoost
+2025-01-06 20:14:25,533 INFO:CatBoost модель сохранена.
+2025-01-06 20:14:25,534 INFO:Начало обучения LightGBM
+2025-01-06 20:14:25,653 INFO:LightGBM модель сохранена.
+2025-01-06 20:14:25,653 INFO:Начало обучения CatBoost
+2025-01-06 20:14:25,712 INFO:CatBoost модель сохранена.
+2025-01-06 20:14:25,713 INFO:Начало обучения LightGBM
+2025-01-06 20:14:25,834 INFO:LightGBM модель сохранена.
+2025-01-06 20:14:25,834 INFO:Начало обучения CatBoost
+2025-01-06 20:14:25,891 INFO:CatBoost модель сохранена.
+2025-01-06 20:14:25,892 INFO:Начало обучения LightGBM
+2025-01-06 20:14:26,016 INFO:LightGBM модель сохранена.
+2025-01-06 20:14:26,016 INFO:Начало обучения CatBoost
+2025-01-06 20:14:26,076 INFO:CatBoost модель сохранена.
+2025-01-06 20:53:45,567 INFO:Начало загрузки данных
+2025-01-06 20:53:45,909 INFO:Столбцы в данных: ['date', 'serial_number', 'model', 'capacity_bytes', 'failure', 'smart_5_raw', 'smart_9_raw', 'smart_187_raw', 'smart_188_raw', 'smart_192_raw', 'smart_197_raw', 'smart_198_raw', 'smart_199_raw', 'smart_240_raw', 'smart_241_raw', 'smart_242_raw']
+2025-01-06 20:53:45,960 INFO:Логарифмированные столбцы: ['smart_5_raw', 'smart_9_raw', 'smart_187_raw', 'smart_188_raw', 'smart_192_raw', 'smart_197_raw', 'smart_198_raw', 'smart_199_raw', 'smart_240_raw', 'smart_241_raw', 'smart_242_raw']
+2025-01-06 20:53:46,094 INFO:Начало балансировки данных с использованием SMOTEENN
+2025-01-06 21:00:15,290 INFO:Начало загрузки данных
+2025-01-06 21:00:16,458 INFO:Столбцы в данных: ['date', 'serial_number', 'model', 'capacity_bytes', 'failure', 'smart_5_raw', 'smart_9_raw', 'smart_187_raw', 'smart_188_raw', 'smart_192_raw', 'smart_197_raw', 'smart_198_raw', 'smart_199_raw', 'smart_240_raw', 'smart_241_raw', 'smart_242_raw']
+2025-01-06 21:00:16,516 INFO:Логарифмированные столбцы: ['smart_5_raw', 'smart_9_raw', 'smart_187_raw', 'smart_188_raw', 'smart_192_raw', 'smart_197_raw', 'smart_198_raw', 'smart_199_raw', 'smart_240_raw', 'smart_241_raw', 'smart_242_raw']
+2025-01-06 21:00:16,579 INFO:Начало балансировки данных с использованием SMOTEENN
+2025-01-06 21:01:15,598 INFO:Начало загрузки данных
+2025-01-06 21:01:16,788 INFO:Столбцы в данных: ['date', 'serial_number', 'model', 'capacity_bytes', 'failure', 'smart_5_raw', 'smart_9_raw', 'smart_187_raw', 'smart_188_raw', 'smart_192_raw', 'smart_197_raw', 'smart_198_raw', 'smart_199_raw', 'smart_240_raw', 'smart_241_raw', 'smart_242_raw']
+2025-01-06 21:01:16,841 INFO:Логарифмированные столбцы: ['smart_5_raw', 'smart_9_raw', 'smart_187_raw', 'smart_188_raw', 'smart_192_raw', 'smart_197_raw', 'smart_198_raw', 'smart_199_raw', 'smart_240_raw', 'smart_241_raw', 'smart_242_raw']
+2025-01-06 21:01:16,876 INFO:Начало балансировки данных с использованием SMOTEENN
+2025-01-06 21:01:36,321 INFO:Начало загрузки данных
+2025-01-06 21:01:36,667 INFO:Столбцы в данных: ['date', 'serial_number', 'model', 'capacity_bytes', 'failure', 'smart_5_raw', 'smart_9_raw', 'smart_187_raw', 'smart_188_raw', 'smart_192_raw', 'smart_197_raw', 'smart_198_raw', 'smart_199_raw', 'smart_240_raw', 'smart_241_raw', 'smart_242_raw']
+2025-01-06 21:01:36,720 INFO:Логарифмированные столбцы: ['smart_5_raw', 'smart_9_raw', 'smart_187_raw', 'smart_188_raw', 'smart_192_raw', 'smart_197_raw', 'smart_198_raw', 'smart_199_raw', 'smart_240_raw', 'smart_241_raw', 'smart_242_raw']
+2025-01-06 21:01:36,760 INFO:Начало балансировки данных с использованием SMOTE
+2025-01-06 21:01:40,057 INFO:После SMOTEENN: Counter({0: 7319970, 1: 7319970})
+2025-01-06 21:01:40,787 INFO:Преобразование обратно в Polars DataFrame успешно
+2025-01-06 21:01:40,819 INFO:
+Распределение классов:
+2025-01-06 21:01:40,879 INFO:shape: (2, 2)
+┌─────┬────────────┐
+│     ┆ proportion │
+│ --- ┆ ---        │
+│ i64 ┆ f64        │
+╞═════╪════════════╡
+│ 1   ┆ 0.5        │
+│ 0   ┆ 0.5        │
+└─────┴────────────┘
+2025-01-06 21:01:40,879 INFO:
+Статистика признаков:
+2025-01-06 21:01:41,429 INFO:shape: (9, 13)
+┌────────────┬──────────────┬─────────────┬─────────────┬───┬─────────────┬─────────────┬─────────────┬─────────────┐
+│ statistic  ┆ capacity_byt ┆ smart_5_raw ┆ smart_9_raw ┆ … ┆ smart_199_r ┆ smart_240_r ┆ smart_241_r ┆ smart_242_r │
+│ ---        ┆ es           ┆ ---         ┆ ---         ┆   ┆ aw          ┆ aw          ┆ aw          ┆ aw          │
+│ str        ┆ ---          ┆ f64         ┆ f64         ┆   ┆ ---         ┆ ---         ┆ ---         ┆ ---         │
+│            ┆ f64          ┆             ┆             ┆   ┆ f64         ┆ f64         ┆ f64         ┆ f64         │
+╞════════════╪══════════════╪═════════════╪═════════════╪═══╪═════════════╪═════════════╪═════════════╪═════════════╡
+│ count      ┆ 1.463994e7   ┆ 1.463994e7  ┆ 1.463994e7  ┆ … ┆ 1.463994e7  ┆ 1.463994e7  ┆ 1.463994e7  ┆ 1.463994e7  │
+│ null_count ┆ 0.0          ┆ 0.0         ┆ 0.0         ┆ … ┆ 0.0         ┆ 0.0         ┆ 0.0         ┆ 0.0         │
+│ mean       ┆ 1.4001e13    ┆ 2.15639     ┆ 9.045223    ┆ … ┆ 0.192172    ┆ 8.952813    ┆ 24.852811   ┆ 25.56141    │
+│ std        ┆ 0.0          ┆ 3.297721    ┆ 0.737169    ┆ … ┆ 0.676186    ┆ 0.898554    ┆ 0.801826    ┆ 0.956416    │
+│ min        ┆ 1.4001e13    ┆ 0.0         ┆ 0.0         ┆ … ┆ 0.0         ┆ 0.0         ┆ 0.0         ┆ 8.407602    │
+│ 25%        ┆ 1.4001e13    ┆ 0.0         ┆ 8.73778     ┆ … ┆ 0.0         ┆ 8.662804    ┆ 24.759005   ┆ 25.262662   │
+│ 50%        ┆ 1.4001e13    ┆ 0.0         ┆ 9.2573      ┆ … ┆ 0.0         ┆ 9.211422    ┆ 25.013784   ┆ 25.739395   │
+│ 75%        ┆ 1.4001e13    ┆ 4.073501    ┆ 9.571923    ┆ … ┆ 0.0         ┆ 9.53675     ┆ 25.192654   ┆ 26.129007   │
+│ max        ┆ 1.4001e13    ┆ 11.039925   ┆ 9.925102    ┆ … ┆ 6.520621    ┆ 9.904287    ┆ 25.401357   ┆ 27.2564     │
+└────────────┴──────────────┴─────────────┴─────────────┴───┴─────────────┴─────────────┴─────────────┴─────────────┘
+2025-01-06 21:01:41,429 INFO:Начало обучения моделей с кросс-валидацией
+2025-01-06 21:01:41,578 INFO:Логарифмированные столбцы: ['smart_5_raw', 'smart_9_raw', 'smart_187_raw', 'smart_188_raw', 'smart_192_raw', 'smart_197_raw', 'smart_198_raw', 'smart_199_raw', 'smart_240_raw', 'smart_241_raw', 'smart_242_raw']
+2025-01-06 21:01:42,102 INFO:Начало балансировки данных с использованием SMOTE
+2025-01-06 21:01:45,338 INFO:После SMOTEENN: Counter({0: 7319970, 1: 7319970})
+2025-01-06 21:01:46,225 INFO:Преобразование обратно в Polars DataFrame успешно
+2025-01-06 21:01:47,396 INFO:
+Итерация 1/5
+2025-01-06 21:01:47,857 INFO:Распределение классов в фолде: {0: 0.5, 1: 0.5}
+2025-01-06 21:01:47,858 ERROR:Ошибка при обучении LightGBM модели:
+Traceback (most recent call last):
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/train.py", line 165, in train_lightgbm
+    lgb.log_evaluation(logger=logging)
+TypeError: log_evaluation() got an unexpected keyword argument 'logger'
+2025-01-06 21:01:47,863 ERROR:Ошибка при обучении моделей с кросс-валидацией:
+Traceback (most recent call last):
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/train.py", line 126, in train_models_iteratively
+    lgb_model = train_lightgbm(X_train, y_train, X_test, y_test)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/train.py", line 165, in train_lightgbm
+    lgb.log_evaluation(logger=logging)
+TypeError: log_evaluation() got an unexpected keyword argument 'logger'
+2025-01-06 21:01:47,864 ERROR:Ошибка в главной функции:
+Traceback (most recent call last):
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/train.py", line 216, in main
+    lightgbm_models, catboost_models = train_models_iteratively(X, y, n_splits=5)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/train.py", line 126, in train_models_iteratively
+    lgb_model = train_lightgbm(X_train, y_train, X_test, y_test)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/train.py", line 165, in train_lightgbm
+    lgb.log_evaluation(logger=logging)
+TypeError: log_evaluation() got an unexpected keyword argument 'logger'
+2025-01-06 21:04:52,829 INFO:Начало загрузки данных
+2025-01-06 21:04:54,083 INFO:Столбцы в данных: ['date', 'serial_number', 'model', 'capacity_bytes', 'failure', 'smart_5_raw', 'smart_9_raw', 'smart_187_raw', 'smart_188_raw', 'smart_192_raw', 'smart_197_raw', 'smart_198_raw', 'smart_199_raw', 'smart_240_raw', 'smart_241_raw', 'smart_242_raw']
+2025-01-06 21:04:54,140 INFO:Логарифмированные столбцы: ['smart_5_raw', 'smart_9_raw', 'smart_187_raw', 'smart_188_raw', 'smart_192_raw', 'smart_197_raw', 'smart_198_raw', 'smart_199_raw', 'smart_240_raw', 'smart_241_raw', 'smart_242_raw']
+2025-01-06 21:04:54,182 INFO:Начало балансировки данных с использованием SMOTE
+2025-01-06 21:04:57,079 INFO:После SMOTE: Counter({0: 7319970, 1: 7319970})
+2025-01-06 21:04:57,758 INFO:Преобразование обратно в Polars DataFrame успешно
+2025-01-06 21:04:57,788 INFO:
+Распределение классов:
+2025-01-06 21:04:57,850 INFO:shape: (2, 2)
+┌─────┬────────────┐
+│     ┆ proportion │
+│ --- ┆ ---        │
+│ i64 ┆ f64        │
+╞═════╪════════════╡
+│ 0   ┆ 0.5        │
+│ 1   ┆ 0.5        │
+└─────┴────────────┘
+2025-01-06 21:04:57,850 INFO:
+Статистика признаков:
+2025-01-06 21:04:58,405 INFO:shape: (9, 13)
+┌────────────┬──────────────┬─────────────┬─────────────┬───┬─────────────┬─────────────┬─────────────┬─────────────┐
+│ statistic  ┆ capacity_byt ┆ smart_5_raw ┆ smart_9_raw ┆ … ┆ smart_199_r ┆ smart_240_r ┆ smart_241_r ┆ smart_242_r │
+│ ---        ┆ es           ┆ ---         ┆ ---         ┆   ┆ aw          ┆ aw          ┆ aw          ┆ aw          │
+│ str        ┆ ---          ┆ f64         ┆ f64         ┆   ┆ ---         ┆ ---         ┆ ---         ┆ ---         │
+│            ┆ f64          ┆             ┆             ┆   ┆ f64         ┆ f64         ┆ f64         ┆ f64         │
+╞════════════╪══════════════╪═════════════╪═════════════╪═══╪═════════════╪═════════════╪═════════════╪═════════════╡
+│ count      ┆ 1.463994e7   ┆ 1.463994e7  ┆ 1.463994e7  ┆ … ┆ 1.463994e7  ┆ 1.463994e7  ┆ 1.463994e7  ┆ 1.463994e7  │
+│ null_count ┆ 0.0          ┆ 0.0         ┆ 0.0         ┆ … ┆ 0.0         ┆ 0.0         ┆ 0.0         ┆ 0.0         │
+│ mean       ┆ 1.4001e13    ┆ 2.15639     ┆ 9.045223    ┆ … ┆ 0.192172    ┆ 8.952813    ┆ 24.852811   ┆ 25.56141    │
+│ std        ┆ 0.0          ┆ 3.297721    ┆ 0.737169    ┆ … ┆ 0.676186    ┆ 0.898554    ┆ 0.801826    ┆ 0.956416    │
+│ min        ┆ 1.4001e13    ┆ 0.0         ┆ 0.0         ┆ … ┆ 0.0         ┆ 0.0         ┆ 0.0         ┆ 8.407602    │
+│ 25%        ┆ 1.4001e13    ┆ 0.0         ┆ 8.73778     ┆ … ┆ 0.0         ┆ 8.662804    ┆ 24.759005   ┆ 25.262662   │
+│ 50%        ┆ 1.4001e13    ┆ 0.0         ┆ 9.2573      ┆ … ┆ 0.0         ┆ 9.211422    ┆ 25.013784   ┆ 25.739395   │
+│ 75%        ┆ 1.4001e13    ┆ 4.073501    ┆ 9.571923    ┆ … ┆ 0.0         ┆ 9.53675     ┆ 25.192654   ┆ 26.129007   │
+│ max        ┆ 1.4001e13    ┆ 11.039925   ┆ 9.925102    ┆ … ┆ 6.520621    ┆ 9.904287    ┆ 25.401357   ┆ 27.2564     │
+└────────────┴──────────────┴─────────────┴─────────────┴───┴─────────────┴─────────────┴─────────────┴─────────────┘
+2025-01-06 21:04:58,405 INFO:Начало обучения моделей с кросс-валидацией
+2025-01-06 21:04:58,584 INFO:Логарифмированные столбцы: ['smart_5_raw', 'smart_9_raw', 'smart_187_raw', 'smart_188_raw', 'smart_192_raw', 'smart_197_raw', 'smart_198_raw', 'smart_199_raw', 'smart_240_raw', 'smart_241_raw', 'smart_242_raw']
+2025-01-06 21:04:58,917 INFO:Начало балансировки данных с использованием SMOTE
+2025-01-06 21:05:02,037 INFO:После SMOTE: Counter({0: 7319970, 1: 7319970})
+2025-01-06 21:05:02,773 INFO:Преобразование обратно в Polars DataFrame успешно
+2025-01-06 21:05:03,959 INFO:
+Итерация 1/5
+2025-01-06 21:05:04,410 INFO:Распределение классов в фолде: {0: 0.5, 1: 0.5}
+2025-01-06 21:06:45,972 INFO:LightGBM модель успешно обучена
+2025-01-06 21:10:48,898 INFO:CatBoost модель успешно обучена
+2025-01-06 21:10:49,030 INFO:
+Итерация 2/5
+2025-01-06 21:10:50,091 INFO:Распределение классов в фолде: {0: 0.5, 1: 0.5}
+2025-01-06 21:12:30,820 INFO:LightGBM модель успешно обучена
+2025-01-06 21:16:15,377 INFO:CatBoost модель успешно обучена
+2025-01-06 21:16:15,512 INFO:
+Итерация 3/5
+2025-01-06 21:16:16,592 INFO:Распределение классов в фолде: {0: 0.5, 1: 0.5}
+2025-01-06 21:17:54,607 INFO:LightGBM модель успешно обучена
+2025-01-06 21:22:50,434 INFO:CatBoost модель успешно обучена
+2025-01-06 21:22:50,567 INFO:
+Итерация 4/5
+2025-01-06 21:22:51,711 INFO:Распределение классов в фолде: {0: 0.5, 1: 0.5}
+2025-01-06 21:24:30,112 INFO:LightGBM модель успешно обучена
+2025-01-06 21:31:28,338 INFO:CatBoost модель успешно обучена
+2025-01-06 21:31:28,472 INFO:
+Итерация 5/5
+2025-01-06 21:31:29,529 INFO:Распределение классов в фолде: {0: 0.5, 1: 0.5}
+2025-01-06 21:33:05,136 INFO:LightGBM модель успешно обучена
+2025-01-06 21:36:43,588 INFO:CatBoost модель успешно обучена
+2025-01-06 21:36:45,455 INFO:Сохранена LightGBM модель 1 по пути /Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/models/lightgbm_model_1.pkl
+2025-01-06 21:36:45,455 INFO:Сохранена CatBoost модель 1 по пути /Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/models/catboost_model_1.pkl
+2025-01-06 21:36:47,059 INFO:Сохранена LightGBM модель 2 по пути /Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/models/lightgbm_model_2.pkl
+2025-01-06 21:36:47,059 INFO:Сохранена CatBoost модель 2 по пути /Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/models/catboost_model_2.pkl
+2025-01-06 21:36:48,641 INFO:Сохранена LightGBM модель 3 по пути /Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/models/lightgbm_model_3.pkl
+2025-01-06 21:36:48,641 INFO:Сохранена CatBoost модель 3 по пути /Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/models/catboost_model_3.pkl
+2025-01-06 21:36:50,220 INFO:Сохранена LightGBM модель 4 по пути /Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/models/lightgbm_model_4.pkl
+2025-01-06 21:36:50,220 INFO:Сохранена CatBoost модель 4 по пути /Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/models/catboost_model_4.pkl
+2025-01-06 21:36:51,801 INFO:Сохранена LightGBM модель 5 по пути /Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/models/lightgbm_model_5.pkl
+2025-01-06 21:36:51,801 INFO:Сохранена CatBoost модель 5 по пути /Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/models/catboost_model_5.pkl
+2025-01-06 21:36:51,801 INFO:Обучение моделей завершено успешно

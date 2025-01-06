@@ -1,0 +1,56 @@
+2025-01-06 21:49:12,124 INFO:Начало загрузки тестовых данных
+2025-01-06 21:49:12,126 ERROR:Ошибка при загрузке тестовых данных:
+Traceback (most recent call last):
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/evaluate.py", line 38, in load_test_data
+    data = pl.read_csv(DATA_PATH)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/polars/_utils/deprecation.py", line 92, in wrapper
+    return function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/polars/_utils/deprecation.py", line 92, in wrapper
+    return function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/polars/_utils/deprecation.py", line 92, in wrapper
+    return function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/polars/io/csv/functions.py", line 534, in read_csv
+    df = _read_csv_impl(
+         ^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/polars/io/csv/functions.py", line 682, in _read_csv_impl
+    pydf = PyDataFrame.read_csv(
+           ^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: No such file or directory (os error 2): /Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/ST14000NM001G_test.csv
+2025-01-06 21:49:12,127 ERROR:Ошибка в главной функции:
+Traceback (most recent call last):
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/evaluate.py", line 145, in main
+    X_test, y_test = load_test_data()
+                     ^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/evaluate.py", line 38, in load_test_data
+    data = pl.read_csv(DATA_PATH)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/polars/_utils/deprecation.py", line 92, in wrapper
+    return function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/polars/_utils/deprecation.py", line 92, in wrapper
+    return function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/polars/_utils/deprecation.py", line 92, in wrapper
+    return function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/polars/io/csv/functions.py", line 534, in read_csv
+    df = _read_csv_impl(
+         ^^^^^^^^^^^^^^^
+  File "/Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/venv/lib/python3.12/site-packages/polars/io/csv/functions.py", line 682, in _read_csv_impl
+    pydf = PyDataFrame.read_csv(
+           ^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: No such file or directory (os error 2): /Users/aleksandr_ermolenko/spbu/nastya/hhd_failure_prediction/ST14000NM001G_test.csv
+2025-01-06 21:50:17,249 - INFO - Начало оценки моделей
+2025-01-06 21:52:26,494 - INFO - Метрики на всём наборе данных:
+2025-01-06 21:52:26,494 - INFO - AUC: 0.9627
+2025-01-06 21:52:26,495 - INFO - Precision: 0.0034
+2025-01-06 21:52:26,495 - INFO - Recall: 0.6919
+2025-01-06 21:52:26,495 - INFO - F1: 0.0068
+2025-01-06 21:52:26,495 - INFO - Confusion Matrix:
+[[7285020   34950]
+ [     53     119]]
+2025-01-06 21:52:26,506 - INFO - Оценка моделей завершена успешно
