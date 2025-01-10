@@ -109,7 +109,8 @@ def plot_curves(y_true, y_pred_proba):
         plt.ylabel('Precision')
         plt.title('Precision-Recall Curve')
         
-        plt.tight_layout()
+        plt.tight_layo
+        ()
         plt.savefig(os.path.join(METRICS_PATH, 'pr_curve.png'))
         plt.close()
         
